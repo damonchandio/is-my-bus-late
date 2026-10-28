@@ -1,0 +1,16 @@
+version: 2
+sources:
+  - name: raw
+    tables:
+      - name: gtfs_stops
+        meta: {external_location: "read_csv_auto('data/gtfs/stops.txt', header=true, all_varchar=true)"}
+      - name: gtfs_stop_times
+        meta: {external_location: "read_csv_auto('data/gtfs/stop_times.txt', header=true, all_varchar=true)"}
+      - name: gtfs_trips
+        meta: {external_location: "read_csv_auto('data/gtfs/trips.txt', header=true, all_varchar=true)"}
+      - name: gtfs_routes
+        meta: {external_location: "read_csv_auto('data/gtfs/routes.txt', header=true, all_varchar=true)"}
+      - name: gtfs_agency
+        meta: {external_location: "read_csv_auto('data/gtfs/agency.txt', header=true, all_varchar=true)"}
+      - name: positions
+        meta: {external_location: "read_csv_auto('data/positions/*.csv', header=true, all_varchar=true)"}

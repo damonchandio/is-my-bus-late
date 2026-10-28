@@ -1,0 +1,9 @@
+name: is_my_bus_late
+version: "1.0"
+profile: is_my_bus_late
+model-paths: ["models"]
+test-paths: ["tests"]
+models:
+  is_my_bus_late:
+    staging: {+materialized: view}
+    marts: {+materialized: table}
