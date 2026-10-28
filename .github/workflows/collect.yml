@@ -1,0 +1,41 @@
+name: collect
+# Every hour, 6am-10pm UK: sample live positions for 50 minutes, score them against the timetable, save the
+# per-route counts and rebuild RESULTS.md. Public repos get unlimited Actions minutes.
+on:
+  schedule:
+    - cron: "3 6-21 * * *"
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: "minutes to collect"
+        default: "50"
+permissions:
+  contents: write
+concurrency: {group: collect, cancel-in-progress: false}
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - name: Timetable (cached for a week; it changes rarely and is 285 MB)
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: data/gtfs
+          key: gtfs-yorkshire-${{ github.run_id }}
+          restore-keys: gtfs-yorkshire-
+      - run: test -f data/gtfs/stop_times.txt || python -m pipeline.fetch timetable
+      - run: python -m pipeline.collect ${{ inputs.minutes || 50 }}
+      - run: dbt run && dbt test
+        env: {DBT_PROFILES_DIR: .}
+      - run: python -m pipeline.report
+      - name: Commit this hour's counts and the leaderboard
+        run: |
+          git config user.name "bus-bot" && git config user.email "bot@users.noreply.github.com"
+          git pull --rebase -q
+          git add data/runs RESULTS.md
+          git commit -qm "sample $(date -u +%Y-%m-%d_%H:%M)" && git push

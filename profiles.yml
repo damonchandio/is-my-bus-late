@@ -1,0 +1,8 @@
+# dbt reads this from the repo root when DBT_PROFILES_DIR=. (the Makefile and CI set it)
+is_my_bus_late:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: data/buses.duckdb
+      threads: 4

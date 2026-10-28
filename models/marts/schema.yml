@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: fct_observations
+    columns:
+      - name: delay_s
+        tests:
+          - not_null
+          - free_range:
+              min: -1800
+              max: 5400
+      - name: metres
+        tests: [not_null]
+  - name: route_lateness
+    columns:
+      - name: route
+        tests: [not_null]
+      - name: pct_on_time
+        tests: [not_null]
