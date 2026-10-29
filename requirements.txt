@@ -1,3 +1,4 @@
 dbt-duckdb>=1.9
 gtfs-realtime-bindings==1.0.0
 protobuf<7
+pandas>=2.0
