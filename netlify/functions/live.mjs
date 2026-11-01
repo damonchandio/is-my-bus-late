@@ -28,13 +28,18 @@ export default async (req) => {
 
 export const config = { path: "/api/live" }
 
-async function download(tries = 2) {
+// The DfT endpoint sometimes hangs for 30 s and then answers the next request in about a second,
+// so give each attempt 8 s and try three times, inside the function's own time limit.
+async function download(tries = 3) {
   try {
-    const r = await fetch(FEED, { headers: { "User-Agent": "is-my-bus-late (github.com/damonchandio/is-my-bus-late)" } })
+    const r = await fetch(FEED, {
+      headers: { "User-Agent": "is-my-bus-late (github.com/damonchandio/is-my-bus-late)" },
+      signal: AbortSignal.timeout(8_000),
+    })
     if (!r.ok) throw new Error(`feed ${r.status}`)
     return new Uint8Array(await r.arrayBuffer())
   } catch (e) {
-    if (tries > 1) return download(tries - 1) // the feed's signed redirect occasionally fails on a cold start
+    if (tries > 1) return download(tries - 1)
     throw e
   }
 }
