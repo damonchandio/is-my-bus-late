@@ -1,0 +1,25 @@
+name: site-data
+# Daily, before the first buses: split the timetable into one small file per route for the live site, and publish
+# them on the site-data branch (replaced each time, so the 35 MB never piles up in history).
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - run: python -m pipeline.fetch timetable && python -m pipeline.site_data out
+      - name: Publish to the site-data branch
+        working-directory: out
+        run: |
+          git init -q -b site-data && git add -A
+          git -c user.name=bus-bot -c user.email=bot@users.noreply.github.com commit -qm "timetable $(date -u +%F)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" site-data

@@ -4,6 +4,7 @@ run so far. Positions themselves are not kept: an hour is ~5 MB and the counts a
 """
 from __future__ import annotations
 
+import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -67,9 +68,20 @@ def results() -> str:
     return "\n".join(lines) + "\n"
 
 
+def stats() -> str:
+    """Per route and operator, every sample so far, for the live site's "usually" line (it shows trip counts itself)."""
+    rows = duckdb.connect().sql(f"""
+        select route, operator, sum(trips)::int, round(100.0 * sum(n_ontime) / sum(n))::int,
+               round(100.0 * sum(n_over5) / sum(n))::int, round(sum(run_median * n) / sum(n) / 60.0, 1)
+        from read_csv_auto('{RUNS.as_posix()}/*.csv', header=true) group by 1, 2""").fetchall()
+    return json.dumps({"updated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
+                       "routes": {f"{r[0]}|{r[1]}": r[2:] for r in rows}}, separators=(",", ":"))
+
+
 if __name__ == "__main__":
     if "--no-save" not in sys.argv:
         with duckdb.connect(str(ROOT / "data" / "buses.duckdb"), read_only=True) as con:
             print("saved", save_run(con).name)
     (ROOT / "RESULTS.md").write_text(results(), encoding="utf-8")
+    (ROOT / "data" / "stats.json").write_text(stats(), encoding="utf-8")
     print((ROOT / "RESULTS.md").read_text()[:1500])
