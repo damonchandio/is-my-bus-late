@@ -209,7 +209,7 @@ function row(b) {
     where = `<strong>To ${esc(place(m.head || "end of route"))}</strong><span>Near ${esc(m.near)}</span>`
     extra = `<ol class="next">${m.next.map((n) => `<li><span class="n">${esc(n.name)}</span>${
       Math.abs(n.expected - n.due) >= 60 ? `<s>${clock(n.due)}</s><b>${clock(n.expected)}</b>` : `<span></span><b>${clock(n.due)}</b>`}</li>`).join("")}</ol>`
-    if (m.relabelledTo) extra += `<p class="note">This bus is broadcasting an earlier journey; it's running the ${clock(m.startedAt)} trip.</p>`
+    if (m.relabelledTo) extra += `<p class="note">This bus is still broadcasting its previous journey, so it's shown against the one it's running now.</p>`
   } else if (m.status === "waiting") {
     mins = `${clock(m.departs)}<small>leaves</small>`
     where = `<strong>To ${esc(place(m.head || "end of route"))}</strong><span>Waiting at ${esc(m.pts[0].stop[0])}</span>`
