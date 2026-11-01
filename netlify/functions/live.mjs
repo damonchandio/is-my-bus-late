@@ -19,7 +19,7 @@ export default async (req) => {
   }
   const buses = route
     ? cache.buses.filter((b) => b.r === route)
-    : cache.buses.map(({ r, la, lo, b }) => ({ r, la, lo, b }))
+    : cache.buses.map(({ r, la, lo, b, v }) => ({ r, la, lo, b, v }))
   return Response.json(
     { at: Math.round(cache.at / 1000), buses },
     { headers: { "Netlify-CDN-Cache-Control": "public, s-maxage=20, stale-while-revalidate=20", "Cache-Control": "no-store" } },
@@ -29,12 +29,12 @@ export default async (req) => {
 export const config = { path: "/api/live" }
 
 // The DfT endpoint sometimes hangs for 30 s and then answers the next request in about a second,
-// so give each attempt 8 s and try three times, inside the function's own time limit.
+// so give each attempt 5 s and try three times, inside the function's own time limit.
 async function download(tries = 3) {
   try {
     const r = await fetch(FEED, {
       headers: { "User-Agent": "is-my-bus-late (github.com/damonchandio/is-my-bus-late)" },
-      signal: AbortSignal.timeout(8_000),
+      signal: AbortSignal.timeout(5_000),
     })
     if (!r.ok) throw new Error(`feed ${r.status}`)
     return new Uint8Array(await r.arrayBuffer())

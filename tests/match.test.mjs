@@ -32,3 +32,13 @@ test("an hour late on a stale trip id is read as the trip that is due now", () =
   assert.equal(r.relabelledTo, "B")
   assert.ok(Math.abs(r.delay - 120) < 60, `delay ${r.delay}`)
 })
+
+test("heading and arrival time at a stop further along", async () => {
+  const { etaAt } = await import("../site/match.js")
+  // trip A outbound towards Hill (due 10:20); bus a third of the way there at 10:07, i.e. on time
+  const r = locate({ t: "A", d: DAY, la: 53.7933, lo: -1.75, ts: at("1007") }, route)
+  assert.ok(r.heading < 1 || r.heading > 359, `heading ${r.heading}`) // due north
+  const eta = etaAt(r, "Hill", at("1007"))
+  assert.equal(eta.due, at("1020"))
+  assert.ok(Math.abs(eta.expected - at("1020")) < 90)
+})

@@ -56,7 +56,7 @@ export function locate(bus, route) {
   let { k } = best
 
   const atStart = k === 0 && best.f < 0.05, atEnd = k === pts.length - 2 && best.f > 0.95
-  if (atStart && delay < 0) return { status: "waiting", trip, pts, departs: pts[0].at, head: route.heads[trip[0]] }
+  if (atStart && delay < 0) return { status: "waiting", trip, pts, departs: pts[0].at, head: route.heads[trip[0]], heading: headingOf(pts, 1), nextIdx: 0, delay: 0 }
   if (atEnd) return { status: "finished", trip, pts, head: route.heads[trip[0]] }
 
   // very late, but another trip in the same direction is due here now: the bus is almost certainly running that one
@@ -86,8 +86,27 @@ function finish(pts, nextIdx, delay, trip, route, bus, relabelledTo) {
   return {
     status: "running", delay, trip, pts, nextIdx, next, relabelledTo,
     head: route.heads[trip[0]], startedAt: pts[0].at,
-    near: pts[Math.max(0, nextIdx - 1)].stop[0],
+    near: pts[Math.max(0, nextIdx - 1)].stop[0], heading: headingOf(pts, nextIdx),
   }
+}
+
+// Compass heading (degrees clockwise from north) of the stretch between stop i-1 and stop i.
+function headingOf(pts, i) {
+  const a = pts[Math.max(0, Math.min(i, pts.length - 1) - 1)].stop, b = pts[Math.max(1, Math.min(i, pts.length - 1))].stop
+  const dx = (b[2] - a[2]) * Math.cos((a[1] * Math.PI) / 180), dy = b[1] - a[1]
+  return ((Math.atan2(dx, dy) * 180) / Math.PI + 360) % 360
+}
+
+// When will this bus reach the named stop? null if it has passed it, doesn't call there, or terminates there.
+export function etaAt(m, stopName, now) {
+  if (!m.pts || (m.status !== "running" && m.status !== "waiting")) return null
+  for (let i = m.nextIdx; i < m.pts.length - 1; i++) { // not the last stop: the bus terminates there
+    if (m.pts[i].stop[0] === stopName) {
+      const delay = m.status === "running" ? m.delay : 0
+      return { due: m.pts[i].at, expected: Math.max(now, m.pts[i].at + delay), delay }
+    }
+  }
+  return null
 }
 
 // On time = 1 minute early to 5 minutes late at a stop, the DfT punctuality window used across this project.
