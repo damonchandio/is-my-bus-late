@@ -2,10 +2,12 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Is my bus late? West Yorkshire</title>
-  <meta name="description" content="Type a bus number and see every bus on that route in West Yorkshire right now: where it is, how late it is, and when it reaches your stop. Live from the DfT bus feed.">
+  <meta name="description" content="Type a bus number and see every bus on that route in West Yorkshire right now, in 3D: where it is, how late it is, and when it reaches your stop. Live from the DfT bus feed.">
   <meta name="theme-color" content="#15120c">
+  <meta property="og:title" content="Is my bus late? West Yorkshire">
+  <meta property="og:description" content="Every bus on your route, live on a 3D map of West Yorkshire, and when it reaches your stop.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2315120c'/%3E%3Cg fill='%23ffb21a'%3E%3Ccircle cx='9' cy='10' r='2'/%3E%3Ccircle cx='16' cy='10' r='2'/%3E%3Ccircle cx='23' cy='10' r='2'/%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='16' cy='22' r='2'/%3E%3C/g%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,39 +16,44 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="app">
-    <section class="panel" aria-label="Find your bus">
-      <form class="blind" id="search" role="search" autocomplete="off">
-        <label for="q" class="sr-only">Bus number</label>
-        <input id="q" name="q" inputmode="text" maxlength="5" placeholder="Bus no." spellcheck="false" autocapitalize="characters">
-        <p class="blind-dest" id="dest" aria-hidden="true">West Yorkshire</p>
-      </form>
+  <div id="map" class="map" role="img" aria-label="3D map of West Yorkshire with live buses"></div>
 
+  <div class="ui">
+    <form class="blind" id="search" role="search" autocomplete="off">
+      <label for="q" class="sr-only">Bus number</label>
+      <input id="q" name="q" inputmode="text" maxlength="5" placeholder="Bus no." spellcheck="false" autocapitalize="characters">
+      <p class="blind-dest" id="dest" aria-hidden="true">West Yorkshire</p>
+      <button type="button" class="clear" id="clear" aria-label="Clear the bus number" hidden>&times;</button>
+    </form>
+
+    <section class="sheet" id="sheet" aria-label="Buses">
+      <button type="button" class="grip" id="grip" aria-expanded="false" aria-controls="sheet"><span class="sr-only">Show more</span></button>
       <div class="choices" id="choices" aria-live="polite"></div>
-
-      <div class="status" id="status" aria-live="polite">
-        <h1>Is my bus late?</h1>
-        <p>Type the number on the front of your bus. You'll see every bus on that route in West Yorkshire right now, how late it is, and when it reaches the next stops.</p>
-        <p class="hint">Try <button type="button" class="try" data-q="72">72</button>, <button type="button" class="try" data-q="621">621</button> or <button type="button" class="try" data-q="X6">X6</button>.</p>
-      </div>
-
+      <div class="status" id="status" aria-live="polite"></div>
+      <div class="mystop" id="mystop" hidden></div>
       <ol class="buses" id="buses"></ol>
-
       <footer class="foot">
-        <p>Positions come from the Department for Transport's live bus feed, about every 30 seconds, and are compared with the published timetable. On time means 1 minute early to 5 minutes late, the DfT's own window.</p>
+        <p>Bus positions come from the Department for Transport's live feed, about every 30 seconds, and are compared with the published timetable. On time means 1 minute early to 5 minutes late, the DfT's own window. Buses are drawn larger than life so you can see them.</p>
         <p>Built by Damon Chandio, <a href="https://damondynamics.co.uk">Damon Dynamics</a>, Bradford. <a href="https://github.com/damonchandio/is-my-bus-late">How it works, on GitHub</a>. Data: <a href="https://data.bus-data.dft.gov.uk/">Bus Open Data Service</a>, Open Government Licence v3.0.</p>
       </footer>
     </section>
-
-    <section class="map-wrap" aria-label="Map of buses">
-      <div id="map" class="map" role="img" aria-label="3D map of West Yorkshire with live bus positions"></div>
-      <div class="legend" aria-hidden="true">
-        <span><i class="dot on-time"></i>On time</span>
-        <span><i class="dot late"></i>Over 5 min late</span>
-        <span><i class="dot early"></i>Early</span>
-      </div>
-    </section>
   </div>
+
+  <div class="legend" aria-hidden="true">
+    <span><i class="sw on-time"></i>On time</span><span><i class="sw late"></i>5+ min late</span><span><i class="sw early"></i>Early</span>
+  </div>
+
+  <template id="intro">
+    <h1>Is my bus late?</h1>
+    <p>Type the number on the front of your bus. You'll see every bus on that route right now, how late it is, and when it reaches your stop.</p>
+    <button type="button" class="near" id="near">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+      Buses near me
+    </button>
+    <div class="recent" id="recent"></div>
+    <p class="hint">Or try <button type="button" class="try" data-q="72">72</button> <button type="button" class="try" data-q="621">621</button> <button type="button" class="try" data-q="X6">X6</button></p>
+    <p class="count" id="count"></p>
+  </template>
 
   <script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
   <script type="module" src="app.js"></script>
