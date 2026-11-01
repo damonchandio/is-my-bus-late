@@ -1,6 +1,8 @@
 name: collect
 # Every hour, 6am-10pm UK: sample live positions for 50 minutes, score them against the timetable, save the
 # per-route counts and rebuild RESULTS.md. Public repos get unlimited Actions minutes.
+# GitHub's scheduler only fires a few of these a day, so each run also starts the next one until 9pm UK;
+# the schedule is the backup that restarts the chain each morning.
 on:
   schedule:
     - cron: "3 6-21 * * *"
@@ -11,6 +13,7 @@ on:
         default: "50"
 permissions:
   contents: write
+  actions: write   # to start the next run
 concurrency: {group: collect, cancel-in-progress: false}
 jobs:
   collect:
@@ -42,3 +45,10 @@ jobs:
           git commit -qm "sample $(date -u +%Y-%m-%d_%H:%M)"
           git pull --rebase -q
           git push
+      - name: Start the next sample
+        # not after a manual cancel, so cancelling a run stops the chain
+        if: success() || failure()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          if [ "$(TZ=Europe/London date +%-H)" -lt 21 ]; then gh workflow run collect.yml --ref main -R "$GITHUB_REPOSITORY"
+          else echo "last sample of the day"; fi

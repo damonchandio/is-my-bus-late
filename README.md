@@ -25,7 +25,7 @@ BODS timetable (GTFS, Yorkshire, weekly)  ───┘
    - `route_lateness` turns that into median and 90th-percentile lateness, and the share of stops reached over 5 minutes late, early, or on time, per route and operator.
 4. `pipeline/report.py` saves the hour's per-route counts (a few KB, committed) and rebuilds `RESULTS.md` from every hour so far.
 
-The hourly run is a GitHub Actions job (`.github/workflows/collect.yml`), 6am to 10pm. Positions are never committed: an hour is ~5 MB and the counts are all the leaderboard needs.
+The hourly run is a GitHub Actions job (`.github/workflows/collect.yml`), 6am to 10pm. GitHub's scheduler only fires a few of those a day, so each run starts the next one itself until 9pm, and the schedule restarts the chain each morning. Positions are never committed: an hour is ~5 MB and the counts are all the leaderboard needs.
 
 **Definitions.** On time = between 1 minute early and 5 minutes late at the stop, the same window the DfT uses for punctuality statistics. A route needs 30 measured trips before it is ranked. A bus is only measured *at a stop*, so a bus that is late between stops but makes it up is not penalised.
 
