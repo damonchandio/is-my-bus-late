@@ -10,6 +10,10 @@ sources:
         meta: {external_location: "read_csv_auto('data/gtfs/trips.txt', header=true, all_varchar=true)"}
       - name: gtfs_routes
         meta: {external_location: "read_csv_auto('data/gtfs/routes.txt', header=true, all_varchar=true)"}
+      - name: gtfs_calendar
+        meta: {external_location: "read_csv_auto('data/gtfs/calendar.txt', header=true, all_varchar=true)"}
+      - name: gtfs_calendar_dates
+        meta: {external_location: "read_csv_auto('data/gtfs/calendar_dates.txt', header=true, all_varchar=true)"}
       - name: gtfs_agency
         meta: {external_location: "read_csv_auto('data/gtfs/agency.txt', header=true, all_varchar=true)"}
       - name: positions

@@ -1,0 +1,5 @@
+# The live site: static files in site/, one function that relays the DfT bus feed (see netlify/functions/live.mjs).
+# Route timetables are served from the site-data branch on GitHub, so the site never needs rebuilding.
+[build]
+  publish = "site"
+  functions = "netlify/functions"

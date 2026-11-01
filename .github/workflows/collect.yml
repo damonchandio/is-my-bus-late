@@ -21,13 +21,14 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12", cache: pip}
       - run: pip install -r requirements.txt
+      - id: week
+        run: echo "w=$(date -u +%G-%V)" >> "$GITHUB_OUTPUT"
       - name: Timetable (cached for a week; it changes rarely and is 285 MB)
         id: cache
         uses: actions/cache@v4
         with:
           path: data/gtfs
-          key: gtfs-yorkshire-${{ github.run_id }}
-          restore-keys: gtfs-yorkshire-
+          key: gtfs-yorkshire-${{ steps.week.outputs.w }}
       - run: test -f data/gtfs/stop_times.txt || python -m pipeline.fetch timetable
       - run: python -m pipeline.collect ${{ inputs.minutes || 50 }}
       - run: dbt run && dbt test
@@ -36,7 +37,7 @@ jobs:
       - name: Commit this hour's counts and the leaderboard
         run: |
           git config user.name "bus-bot" && git config user.email "bot@users.noreply.github.com"
-          git add data/runs RESULTS.md
+          git add data/runs RESULTS.md data/stats.json
           git diff --cached --quiet && exit 0
           git commit -qm "sample $(date -u +%Y-%m-%d_%H:%M)"
           git pull --rebase -q

@@ -7,3 +7,7 @@ logs/
 __pycache__/
 .pytest_cache/
 .user.yml
+.netlify/
+site-data/
+out/
+site/site-data/
