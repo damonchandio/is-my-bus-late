@@ -1,0 +1,9 @@
+route,operator,n,trips,delay_sum,n_over5,n_early,n_ontime,run_median
+24,First Leeds,3,1,196.0,0,0,3,59.0
+501,First Halifax,7,1,62.0,0,0,7,9.0
+50,First Leeds,2,1,-237.0,0,2,0,-118.5
+34,First Leeds,12,1,-376.0,0,0,12,-43.0
+351,First South Yorkshire,1,1,5.0,0,0,1,5.0
+TK2,Arriva Yorkshire,6,1,-55.0,0,0,6,-15.5
+72,First Bradford,9,1,-1117.0,0,7,2,-124.0
+TK1,Arriva Yorkshire,11,1,-1845.0,0,10,1,-172.0
