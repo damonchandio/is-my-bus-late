@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-18 hourly samples between 2026-10-28 and 2026-11-03, 172,665 measurements at stops, 9,594 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+19 hourly samples between 2026-10-28 and 2026-11-03, 172,665 measurements at stops, 9,594 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -33,8 +33,8 @@
 | 50A | First Leeds | -0.5 | 3.8% | 45.2% | 51.1% | 88 |
 | 640 | First Bradford | -0.4 | 3.8% | 35.7% | 60.5% | 46 |
 | 164 | Arriva Yorkshire | -0.3 | 6.2% | 37.4% | 56.4% | 52 |
-| 202 | Arriva Yorkshire | -0.3 | 11.8% | 42.7% | 45.5% | 85 |
 | 543 | First Halifax | -0.3 | 1.5% | 39.6% | 58.9% | 30 |
+| 202 | Arriva Yorkshire | -0.3 | 11.8% | 42.7% | 45.5% | 85 |
 | 636 | First Bradford | -0.0 | 4.5% | 28.0% | 67.5% | 44 |
 
 ## By operator
