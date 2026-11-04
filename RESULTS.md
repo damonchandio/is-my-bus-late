@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-44 hourly samples between 2026-10-28 and 2026-11-04, 666,883 measurements at stops, 34,438 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+45 hourly samples between 2026-10-28 and 2026-11-04, 666,883 measurements at stops, 34,438 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -13,8 +13,8 @@
 | 361 | First South Yorkshire | 8.3 | 60.6% | 0.0% | 39.4% | 30 |
 | 613 | First Bradford | 8.2 | 36.6% | 11.9% | 51.5% | 52 |
 | 615 | East Yorkshire | 8.0 | 54.2% | 6.2% | 39.6% | 96 |
-| 619 | East Yorkshire | 7.6 | 47.8% | 4.1% | 48.2% | 67 |
 | 614 | First Bradford | 7.6 | 48.9% | 4.6% | 46.5% | 44 |
+| 619 | East Yorkshire | 7.6 | 47.8% | 4.1% | 48.2% | 67 |
 | 574 | Team Pennine | 7.4 | 59.0% | 4.3% | 36.8% | 61 |
 | 616 | East Yorkshire | 6.9 | 43.9% | 5.5% | 50.6% | 98 |
 | 526 | Team Pennine | 6.7 | 49.9% | 0.7% | 49.4% | 54 |
@@ -50,9 +50,9 @@
 | First Bradford | 59.0% | 25.7% | 3657 |
 | First South Yorkshire | 59.3% | 36.1% | 187 |
 | Stotts Coaches | 59.6% | 28.9% | 180 |
+| Coastliner | 59.7% | 31.8% | 72 |
 | Arriva Yorkshire | 59.7% | 18.9% | 8359 |
 | TLC Travel | 59.7% | 26.4% | 1006 |
-| Coastliner | 59.7% | 31.8% | 72 |
 | East Yorkshire | 59.8% | 28.9% | 965 |
 | First Halifax | 61.2% | 28.4% | 2333 |
 | Connexions Buses | 61.3% | 26.0% | 410 |
