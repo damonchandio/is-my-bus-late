@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-83 hourly samples between 2026-10-28 and 2026-11-06, 1,529,594 measurements at stops, 77,526 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+84 hourly samples between 2026-10-28 and 2026-11-07, 1,529,596 measurements at stops, 77,527 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -10,16 +10,16 @@
 | 508 | First Halifax | 14.2 | 78.6% | 0.9% | 20.4% | 264 |
 | 635 | TLC Travel | 11.6 | 64.2% | 5.2% | 30.6% | 60 |
 | 412 | Connexions Buses | 11.4 | 60.0% | 0.0% | 40.0% | 34 |
-| X17 | Stagecoach Yorkshire | 10.1 | 61.3% | 4.3% | 34.4% | 117 |
 | 614 | First Bradford | 10.1 | 54.9% | 6.2% | 38.9% | 96 |
+| X17 | Stagecoach Yorkshire | 10.1 | 61.3% | 4.3% | 34.4% | 117 |
 | 64 | The Keighley Bus Company | 9.0 | 39.7% | 3.9% | 56.4% | 86 |
 | 615 | East Yorkshire | 8.6 | 56.7% | 7.1% | 36.2% | 199 |
 | 72 | The Keighley Bus Company | 8.2 | 31.8% | 8.5% | 59.7% | 37 |
 | 361 | First South Yorkshire | 8.1 | 56.2% | 0.0% | 43.8% | 59 |
 | 616 | East Yorkshire | 7.9 | 50.3% | 3.4% | 46.3% | 198 |
-| 613 | First Bradford | 7.8 | 43.3% | 10.1% | 46.7% | 113 |
-| 590 | First Halifax | 7.8 | 54.2% | 6.6% | 39.2% | 300 |
 | 619 | East Yorkshire | 7.8 | 49.0% | 4.8% | 46.2% | 150 |
+| 590 | First Halifax | 7.8 | 54.2% | 6.6% | 39.2% | 300 |
+| 613 | First Bradford | 7.8 | 43.3% | 10.1% | 46.7% | 113 |
 | 394 | Stotts Coaches | 7.8 | 62.6% | 2.1% | 35.3% | 50 |
 
 ## The 10 most punctual routes
@@ -32,8 +32,8 @@
 | 42 | First Leeds | 0.2 | 8.1% | 30.8% | 61.1% | 787 |
 | T2 | TLC Travel | 0.2 | 7.5% | 22.8% | 69.7% | 32 |
 | 444 | Arriva Yorkshire | 0.2 | 6.8% | 30.7% | 62.5% | 341 |
-| 11A | First Leeds | 0.3 | 6.2% | 27.4% | 66.4% | 36 |
 | 50 | First Leeds | 0.3 | 11.1% | 31.7% | 57.2% | 486 |
+| 11A | First Leeds | 0.3 | 6.2% | 27.4% | 66.4% | 36 |
 | 543 | First Halifax | 0.5 | 6.2% | 29.6% | 64.3% | 206 |
 | 272 | Arriva Yorkshire | 0.5 | 0.0% | 14.2% | 85.8% | 43 |
 
@@ -49,7 +49,7 @@
 | Squarepeg | 55.0% | 31.8% | 455 |
 | A Lyles and Son | 55.3% | 24.4% | 82 |
 | TLC Travel | 56.2% | 32.2% | 2235 |
-| Arriva Yorkshire | 57.6% | 23.2% | 18143 |
+| Arriva Yorkshire | 57.6% | 23.2% | 18144 |
 | First Halifax | 58.0% | 32.6% | 5071 |
 | First South Yorkshire | 58.3% | 38.8% | 389 |
 | East Yorkshire | 58.5% | 30.5% | 2119 |
@@ -63,7 +63,7 @@
 | The Burnley Bus Company | 65.3% | 23.9% | 601 |
 | The Harrogate Bus Company | 66.9% | 23.9% | 1098 |
 | Team Pennine | 67.8% | 22.6% | 3544 |
-| The Keighley Bus Company | 68.5% | 22.7% | 4663 |
+| The Keighley Bus Company | 68.5% | 22.7% | 4664 |
 | First Halifax, Calder Valley & Huddersfield | 72.5% | 17.7% | 5555 |
 | Flyer | 73.4% | 14.4% | 944 |
 
