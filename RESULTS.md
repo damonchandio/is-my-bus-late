@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-126 hourly samples between 2026-10-28 and 2026-11-10, 2,192,048 measurements at stops, 111,931 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+127 hourly samples between 2026-10-28 and 2026-11-10, 2,192,048 measurements at stops, 111,931 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -30,10 +30,10 @@
 | 208 | Stagecoach Yorkshire | -0.7 | 18.8% | 48.7% | 32.5% | 31 |
 | PR1 | First Leeds | -0.4 | 8.3% | 45.0% | 46.7% | 288 |
 | 101 | Globe Coaches | 0.1 | 6.6% | 32.0% | 61.4% | 69 |
-| 444 | Arriva Yorkshire | 0.1 | 6.5% | 30.9% | 62.6% | 494 |
 | 42 | First Leeds | 0.1 | 6.9% | 31.1% | 62.1% | 1128 |
-| 120 | Globe Coaches | 0.2 | 3.6% | 32.1% | 64.4% | 40 |
+| 444 | Arriva Yorkshire | 0.1 | 6.5% | 30.9% | 62.6% | 494 |
 | 177 | Globe Coaches | 0.2 | 4.9% | 28.5% | 66.6% | 79 |
+| 120 | Globe Coaches | 0.2 | 3.6% | 32.1% | 64.4% | 40 |
 | T2 | TLC Travel | 0.3 | 9.2% | 18.4% | 72.4% | 53 |
 | DTB | Station Coaches | 0.4 | 13.9% | 31.0% | 55.1% | 69 |
 
@@ -43,8 +43,8 @@
 |---|---|---|---|
 | Kirkby Lonsdale Coaches | 37.6% | 62.4% | 52 |
 | Bee Network | 51.6% | 41.5% | 360 |
-| Globe Holidays | 53.8% | 24.8% | 341 |
 | Stagecoach Yorkshire | 53.8% | 30.7% | 5567 |
+| Globe Holidays | 53.8% | 24.8% | 341 |
 | Globe Coaches | 54.0% | 27.1% | 987 |
 | Squarepeg | 54.3% | 31.7% | 512 |
 | A Lyles and Son | 55.4% | 24.1% | 116 |
@@ -64,8 +64,8 @@
 | The Harrogate Bus Company | 68.1% | 22.3% | 1600 |
 | Team Pennine | 68.9% | 21.1% | 4972 |
 | The Keighley Bus Company | 70.0% | 21.1% | 6714 |
-| First Halifax, Calder Valley & Huddersfield | 73.9% | 16.2% | 7881 |
 | Flyer | 73.9% | 14.2% | 1405 |
+| First Halifax, Calder Valley & Huddersfield | 73.9% | 16.2% | 7881 |
 | 21 Transport | 85.7% | 8.3% | 41 |
 
 Typical minutes late = observation-weighted average of each hourly sample's median delay. Routes need 30 measured trips to appear. Source: DfT Bus Open Data Service (OGL v3.0).
