@@ -6,7 +6,7 @@
 
 Every bus in England reports its position to the Department for Transport about every 30 seconds, and every timetable is published alongside it. Both are open, with no account and no key. This repo joins the two: where was each bus when it reached a stop, and when was it meant to be there. The leaderboard rebuilds itself every hour.
 
-**→ [is-my-bus-late.netlify.app](https://is-my-bus-late.netlify.app): type a bus number, see every bus on that route right now and how late it is.**
+**→ [is-my-bus-late.pages.dev](https://is-my-bus-late.pages.dev): type a bus number, see every bus on that route right now and how late it is.**
 **→ [RESULTS.md](RESULTS.md): the leaderboard built from the hourly samples.**
 
 ## How it works
@@ -33,7 +33,7 @@ The hourly run is a GitHub Actions job (`.github/workflows/collect.yml`), 6am to
 
 `site/` is a static page with a 3D map (MapLibre, OpenFreeMap tiles). It needs no server of its own and no API key:
 
-- `netlify/functions/live.mjs` fetches the DfT feed (all of England, ~1.5 MB), keeps West Yorkshire and returns the buses on one route. The feed sends no CORS headers, so the browser can't read it directly. It decodes GTFS-RT with a small built-in protobuf reader instead of a dependency, checked against the Python pipeline on the same feed.
+- `netlify/functions/live.mjs` (run as the Supabase Edge Function in `supabase/functions/bus-live`; the static site is on Cloudflare Pages) fetches the DfT feed (all of England, ~1.5 MB), keeps West Yorkshire and returns the buses on one route. The feed sends no CORS headers, so the browser can't read it directly. It decodes GTFS-RT with a small built-in protobuf reader instead of a dependency, checked against the Python pipeline on the same feed.
 - `.github/workflows/site-data.yml` splits the 285 MB timetable every morning into one small JSON file per route (70 KB compressed at most) on the `site-data` branch, so the browser only loads the route it is looking at.
 - `site/match.js` places each bus on its timetabled trip and interpolates between stops, so the delay is right mid-road too. It agrees with the dbt model to within 2 minutes on 498 of 499 Bradford readings.
 
