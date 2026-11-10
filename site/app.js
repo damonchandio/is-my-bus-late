@@ -1,5 +1,6 @@
 import { clock, etaAt, locate, londonDate, serviceDayStart, verdict } from "./match.js"
-import { COLOURS, animateBuses, createMap, empty, point, rescale, tag } from "./map3d.js"
+import { COLOURS, LOOKS, animateBuses, createMap, empty, point, rescale, tag } from "./map3d.js"
+import { busSvg, opColour, toast } from "./ui.js"
 
 const params = new URLSearchParams(location.search)
 const REPO = "https://raw.githubusercontent.com/damonchandio/is-my-bus-late"
@@ -19,7 +20,20 @@ const place = (s) => String(s).replace(/\bInterchang$/, "Interchange").replace(/
 const store = { get: (k) => { try { return JSON.parse(localStorage.getItem(k)) } catch { return null } },
   set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)) } catch { /* private mode */ } } }
 
-let routes = [], byId = new Map(), stats = {}, current = null, selected = null, timer = null
+// ---------- options: map style and 3D or flat, remembered on this device ----------
+const hour = new Date().getHours()
+const lookKey = [params.get("look"), store.get("look")].find((k) => LOOKS[k]) || (hour < 7 || hour >= 17 ? "night" : "street")
+const look = LOOKS[lookKey]
+document.body.classList.toggle("dark", !!look.dark)
+document.body.classList.toggle("tilt-shift", !!look.tiltShift)
+let flat = !!store.get("flat")
+const tilt = (pitch) => (flat ? 0 : pitch)
+// changing style reloads the page (the route is in the address); skip the fly-in the second time
+const skipIntro = sessionStorage.getItem("skipIntro") === "1"
+sessionStorage.removeItem("skipIntro")
+const startClose = params.has("r") || skipIntro
+
+let routes = [], byId = new Map(), stats = {}, current = null, selected = null, timer = null, dir = null
 let routeCache = {}, shown = [], tags = new Map(), lastLive = null, you = null
 
 const getJson = async (url) => {
@@ -29,12 +43,13 @@ const getJson = async (url) => {
 }
 
 // ---------- the 3D map ----------
-const { map, ready } = createMap("map", { reduceMotion, startClose: params.has("r") })
+const { map, ready } = createMap("map", { reduceMotion, startClose, look })
 ready.then(() => {
-  if (!params.has("r")) {
+  if (flat) map.jumpTo({ pitch: 0, bearing: 0 })
+  if (!startClose) {
     // the one orchestrated moment: from the globe down into the Bradford valley
     const wide = innerWidth >= 960
-    map.flyTo({ center: [-1.7505, 53.7915], zoom: wide ? 15.1 : 14.6, pitch: wide ? 72 : 62, bearing: -32,
+    map.flyTo({ center: [-1.7505, 53.7915], zoom: wide ? 15.1 : 14.6, pitch: tilt(wide ? 72 : 62), bearing: flat ? 0 : -32,
       padding: openArea(), duration: reduceMotion ? 0 : 7000, curve: 1.6, essential: true })
   }
   // the globe is for the arrival; once down at street level a flat map is cheaper and can draw the horizon haze
@@ -125,7 +140,7 @@ function choose(v) {
 function showChoices(rs) {
   choices.innerHTML = rs.map((r) => `
     <button type="button" class="choice" data-id="${esc(r.id)}" aria-pressed="${current?.id === r.id}">
-      <b>${esc(r.route)}</b>${esc(r.operator)}<small>${r.to.length ? "To " + r.to.map((t) => esc(place(t))).join(" or ") : "&nbsp;"}</small>
+      ${busSvg(opColour(r.operator), 44)}<span><b>${esc(r.route)}</b>${esc(r.operator)}<small>${r.to.length ? "To " + r.to.map((t) => esc(place(t))).join(" or ") : "&nbsp;"}</small></span>
     </button>`).join("")
   choices.querySelectorAll(".choice").forEach((b) => b.addEventListener("click", () => pickRoute(byId.get(b.dataset.id))))
 }
@@ -134,9 +149,10 @@ const say = (html) => { status.innerHTML = html }
 
 // ---------- home: every bus in West Yorkshire ----------
 function home() {
-  current = null; selected = null; clearInterval(timer)
+  current = null; selected = null; dir = null; clearInterval(timer)
   document.body.classList.remove("has-route")
-  choices.innerHTML = ""; list.innerHTML = ""; mystop.hidden = true; dest.textContent = "West Yorkshire"
+  $("fav").hidden = $("share").hidden = true
+  choices.innerHTML = ""; list.innerHTML = ""; $("dirs").innerHTML = ""; mystop.hidden = true; dest.textContent = "West Yorkshire"
   history.replaceState(null, "", location.pathname + keepParams())
   status.replaceChildren($("intro").content.cloneNode(true))
   status.querySelectorAll(".try").forEach((b) => b.addEventListener("click", () => choose(b.dataset.q)))
@@ -144,7 +160,11 @@ function home() {
   const recent = (store.get("recent") || []).map((id) => byId.get(id)).filter(Boolean)
   if (recent.length) $("recent").innerHTML = `<p>Your recent buses</p>` + recent.map((r) =>
     `<button type="button" class="chip-r" data-id="${esc(r.id)}" title="${esc(r.operator)}">${esc(r.route)}</button>`).join("")
-  $("recent").querySelectorAll(".chip-r").forEach((b) => b.addEventListener("click", () => pickRoute(byId.get(b.dataset.id))))
+  const favs = (store.get("favs") || []).map((id) => byId.get(id)).filter(Boolean)
+  if (favs.length) $("favs").innerHTML = `<p>Your saved buses</p>` + favs.map((r) =>
+    `<button type="button" class="chip-r saved" data-id="${esc(r.id)}" title="${esc(r.operator)}">★ ${esc(r.route)}</button>`).join("")
+  status.querySelectorAll(".chip-r").forEach((b) => b.addEventListener("click", () => pickRoute(byId.get(b.dataset.id))))
+  league("late")
   ready.then(() => { map.getSource("route").setData(empty()); map.getSource("stops").setData(empty()) })
   overview()
   timer = setInterval(overview, REFRESH_MS * 2)
@@ -159,11 +179,35 @@ async function overview() {
     if (c) c.textContent = `${live.buses.length} buses are on the road in West Yorkshire right now. Tap one on the map to see its route.`
     await ready
     placeBuses(live.buses.map((b, i) => ({ id: b.v || `o${i}`, routeId: b.r, lon: b.lo, lat: b.la, heading: b.b >= 0 ? b.b : 0,
-      colour: COLOURS.overview })), false)
+      colour: opColour(byId.get(b.r)?.operator) })), false)
   } catch { /* the map still works without buses */ }
 }
 
 const keepParams = () => { const p = new URLSearchParams(params); p.delete("r"); const s = p.toString(); return s ? "?" + s : "" }
+
+// ---------- league table: which routes run late, from the hourly samples ----------
+function league(kind) {
+  const el = $("league")
+  if (!el) return
+  const rows = Object.entries(stats.routes || {}).map(([k, s]) => {
+    const [route, operator] = k.split("|")
+    return { r: routes.find((x) => x.route === route && x.operator === operator), n: s[0], on: s[1], late: s[2] }
+  }).filter((x) => x.r && x.n >= 30).sort(kind === "late" ? (a, b) => b.late - a.late : (a, b) => b.on - a.on).slice(0, 5)
+  if (!rows.length) { el.innerHTML = ""; return }
+  el.innerHTML = `<h2>League table</h2>
+    <div class="seg" role="group" aria-label="Which end of the table">
+      <button type="button" data-k="late" aria-pressed="${kind === "late"}">Most often late</button>
+      <button type="button" data-k="on" aria-pressed="${kind === "on"}">Most punctual</button>
+    </div>
+    <ol>${rows.map((x) => `<li><button type="button" data-id="${esc(x.r.id)}">
+      ${busSvg(opColour(x.r.operator), 40)}<span class="lr"><b>${esc(x.r.route)}</b> ${esc(x.r.operator)}
+      <span class="bar ${kind}"><i style="width:${kind === "late" ? x.late : x.on}%"></i></span></span>
+      <span class="pc">${kind === "late" ? x.late : x.on}%<small>${kind === "late" ? "5+ min late" : "on time"}</small></span>
+    </button></li>`).join("")}</ol>
+    <p class="private">Share of stops reached, measured every hour. Routes need 30 measured trips to rank.</p>`
+  el.querySelectorAll(".seg button").forEach((b) => b.addEventListener("click", () => league(b.dataset.k)))
+  el.querySelectorAll("ol button").forEach((b) => b.addEventListener("click", () => pickRoute(byId.get(b.dataset.id))))
+}
 
 // ---------- buses near me ----------
 function nearMe() {
@@ -174,7 +218,7 @@ function nearMe() {
     you = [pos.coords.longitude, pos.coords.latitude]
     await ready
     map.getSource("you").setData({ type: "FeatureCollection", features: [point(...you)] })
-    map.flyTo({ center: you, zoom: 15.2, pitch: 62, padding: openArea(), duration: reduceMotion ? 0 : 2500 })
+    map.flyTo({ center: you, zoom: 15.2, pitch: tilt(62), padding: openArea(), duration: reduceMotion ? 0 : 2500 })
     const live = lastLive || await getJson(LIVE).catch(() => null)
     if (!live) return say(`<p class="error">The live bus feed isn't answering. Try again in a minute.</p>`)
     const kx = 111320 * Math.cos((you[1] * Math.PI) / 180)
@@ -201,8 +245,10 @@ function nearMe() {
 // ---------- a route ----------
 async function pickRoute(r) {
   if (!r) return
-  current = r; selected = null
+  current = r; selected = null; dir = null
   document.body.classList.add("has-route")
+  $("fav").hidden = $("share").hidden = false
+  $("fav").setAttribute("aria-pressed", (store.get("favs") || []).includes(r.id))
   q.value = r.route; clearBtn.hidden = false
   dest.textContent = r.to[0] ? place(r.to[0]) : r.operator
   choices.querySelectorAll(".choice").forEach((b) => b.setAttribute("aria-pressed", b.dataset.id === r.id))
@@ -233,9 +279,16 @@ async function refresh(fit) {
   }
   if (r !== current) return
   const tt = routeCache[r.id]
-  const buses = live.buses.map((b) => ({ ...b, m: locate(b, tt) }))
+  const all = live.buses.map((b) => ({ ...b, m: locate(b, tt) }))
     .filter((b) => b.m.status !== "finished")
     .sort((a, b) => order(a) - order(b))
+  // direction filter: only offered when buses are heading to more than one place
+  const heads = [...new Set(all.map((b) => b.m.head).filter(Boolean))]
+  if (!heads.includes(dir)) dir = null
+  $("dirs").innerHTML = heads.length > 1 ? [null, ...heads].map((h) =>
+    `<button type="button" aria-pressed="${dir === h}" data-h="${esc(h ?? "")}">${h ? "To " + esc(place(h)) : "Both ways"}</button>`).join("") : ""
+  $("dirs").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { dir = b.dataset.h || null; refresh(false) }))
+  const buses = dir ? all.filter((b) => b.m.head === dir) : all
   render(r, tt, buses, live.at)
   renderArrivals(r, tt, buses)
   await ready
@@ -299,7 +352,7 @@ function row(b) {
     where = `<strong>Position only</strong><span>${m.status === "offroute" ? "This bus is away from its timetabled route, perhaps on a diversion." : "This bus isn't reporting a timetabled journey."}</span>`
   }
   return `<li class="bus ${cls}" data-v="${esc(b.v)}" aria-current="${b.v === selected}">
-    <button type="button"><span class="mins">${mins}</span><span class="where">${where}${extra}</span></button></li>`
+    <button type="button"><span class="lead"><span class="mins">${mins}</span>${busSvg(opColour(current?.operator), 52)}</span><span class="where">${where}${extra}</span></button></li>`
 }
 
 // ---------- your stop ----------
@@ -368,8 +421,8 @@ function select(v, fly) {
   for (const [id, t] of tags) t.getElement().classList.toggle("sel", id === selected)
   const b = shown.find((x) => x.id === selected)
   if (b && fly) {
-    map.flyTo({ center: [b.lon, b.lat], zoom: Math.max(map.getZoom(), 16), pitch: 66, padding: openArea(),
-      bearing: (b.heading + 200) % 360, duration: reduceMotion ? 0 : 1800 })
+    map.flyTo({ center: [b.lon, b.lat], zoom: Math.max(map.getZoom(), 16), pitch: tilt(66), padding: openArea(),
+      bearing: flat ? 0 : (b.heading + 200) % 360, duration: reduceMotion ? 0 : 1800 })
     if (innerWidth < 960) sheet.classList.remove("open")
   }
   list.querySelector(`[data-v="${CSS.escape(v)}"]`)?.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" })
@@ -401,7 +454,7 @@ function draw(tt, buses, fit) {
     const pts = [...buses.map((b) => [b.lo, b.la]), ...[...stopsOn.values()].map((s) => [s[2], s[1]])]
     if (pts.length) {
       const bounds = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]))
-      map.fitBounds(bounds, { padding: openArea(40), pitch: 58, bearing: -20, maxZoom: 15, duration: reduceMotion ? 0 : 2200 })
+      map.fitBounds(bounds, { padding: openArea(40), pitch: tilt(58), bearing: flat ? 0 : -20, maxZoom: 15, duration: reduceMotion ? 0 : 2200 })
     }
   }
 }
@@ -419,6 +472,45 @@ function square(lon, lat, m) {
   const dx = m / (111320 * Math.cos((lat * Math.PI) / 180)), dy = m / 110540
   return [[lon - dx, lat - dy], [lon + dx, lat - dy], [lon + dx, lat + dy], [lon - dx, lat + dy], [lon - dx, lat - dy]]
 }
+
+// ---------- tools: save, share, 3D or flat, map style ----------
+$("fav").addEventListener("click", () => {
+  if (!current) return
+  const favs = store.get("favs") || [], on = !favs.includes(current.id)
+  store.set("favs", on ? [current.id, ...favs].slice(0, 8) : favs.filter((x) => x !== current.id))
+  $("fav").setAttribute("aria-pressed", on)
+  toast(on ? `Saved the ${current.route}. It's on the home screen now.` : `Removed the ${current.route} from your saved buses.`)
+})
+
+$("share").addEventListener("click", async () => {
+  if (!current) return
+  const data = { title: `Is the ${current.route} late?`, text: `Live: where the ${current.route} is right now and how late it's running.`, url: location.href }
+  try {
+    if (navigator.share) await navigator.share(data)
+    else { await navigator.clipboard.writeText(data.url); toast("Link copied.") }
+  } catch { /* closed the share sheet */ }
+})
+
+const viewBtn = $("view")
+const showView = () => { viewBtn.textContent = flat ? "2D" : "3D"; viewBtn.setAttribute("aria-pressed", !flat) }
+showView()
+viewBtn.addEventListener("click", () => {
+  flat = !flat; store.set("flat", flat); showView()
+  map.easeTo({ pitch: tilt(62), bearing: flat ? 0 : -24, duration: reduceMotion ? 0 : 900 })
+})
+
+const looks = $("looks"), looksBtn = $("looks-btn")
+looks.innerHTML = Object.entries(LOOKS).map(([k, l]) =>
+  `<button type="button" data-k="${k}" aria-pressed="${k === lookKey}"><i class="sw-${k}"></i><b>${esc(l.name)}</b><small>${esc(l.blurb)}</small></button>`).join("")
+const closeLooks = () => { looks.hidden = true; looksBtn.setAttribute("aria-expanded", false) }
+looksBtn.addEventListener("click", () => { looks.hidden = !looks.hidden; looksBtn.setAttribute("aria-expanded", !looks.hidden) })
+document.addEventListener("keydown", (e) => e.key === "Escape" && closeLooks())
+looks.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+  if (b.dataset.k === lookKey) return closeLooks()
+  store.set("look", b.dataset.k)
+  sessionStorage.setItem("skipIntro", "1")
+  location.reload()
+}))
 
 // ---------- start ----------
 Promise.all([

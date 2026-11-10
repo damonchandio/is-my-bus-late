@@ -32,7 +32,11 @@ const NEAR_M = 100, OFF_ROUTE_M = 250, AMBIGUOUS_S = 900, ALT_WINDOW_S = 300
 export function locate(bus, route) {
   const trip = route.trips[bus.t]
   if (!trip) return { status: "unmatched" }
-  const day = bus.d || londonDate(bus.ts)
+  // A 24:15 journey belongs to yesterday's service day, but after midnight the feed stamps it with the new date
+  // (which made it read "1438 minutes early"). Use the service day that puts the journey nearest to now.
+  const stamped = bus.d || londonDate(bus.ts)
+  const mid = serviceDayStart(stamped) + trip[1] + trip[3].at(-1) / 2
+  const day = londonDate(serviceDayStart(stamped) + Math.round((bus.ts - mid) / 86400) * 86400 + 43200)
   const pts = timesOf(route, trip, serviceDayStart(day))
   // flat-earth metres around the bus: plenty accurate over a few hundred metres
   const kx = 111320 * Math.cos((bus.la * Math.PI) / 180), ky = 110540
