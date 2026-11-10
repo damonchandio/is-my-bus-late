@@ -42,3 +42,11 @@ test("heading and arrival time at a stop further along", async () => {
   assert.equal(eta.due, at("1020"))
   assert.ok(Math.abs(eta.expected - at("1020")) < 90)
 })
+
+test("after midnight, a 24:10 journey stamped with the new date is on time, not a day early", () => {
+  // trip N leaves at 24:10 on the 1 Nov service day; at 00:17 on 2 Nov the feed says start_date 2 Nov
+  const night = { ...route, trips: { N: loop(86400 + 600) } }
+  const r = locate({ t: "N", d: "20261102", la: 53.7933, lo: -1.75, ts: serviceDayStart("20261102") + 17 * 60 }, night)
+  assert.equal(r.status, "running")
+  assert.ok(Math.abs(r.delay) < 300, `delay ${r.delay}`)
+})
