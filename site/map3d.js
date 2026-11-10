@@ -1,11 +1,13 @@
-// The 3D scene: real 3D terrain, buildings, and double-decker buses built from extrusions, in one of a few looks.
-// Everything is MapLibre's own WebGL (no three.js) and every source is free with no key.
+// The 3D scene: real 3D terrain, buildings, and double-decker bus models (bus3d.js), in one of a few looks.
+// Every source is free with no key.
+import { busLayer } from "./bus3d.js"
 
 const TERRAIN = "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/{z}/{x}/{y}.png" // AWS open data
 const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/"
 const OFM = "https://tiles.openfreemap.org"
 export const COLOURS = { late: "#d2412a", "on-time": "#1e8a5c", early: "#2f6bd8", quiet: "#7b8597", overview: "#6a4ad6" }
-const GLASS = "#1b2430", SKIRT = "#141a22", LED = "#ffb21a"
+const LED = "#ffb21a"
+let fleet // the three.js bus layer
 // buses are drawn larger than life so they read at any zoom: 9x out at city level, 2.5x up close
 const scaleAt = (zoom) => Math.min(9, Math.max(2.5, 2 ** (17.8 - zoom)))
 
@@ -30,7 +32,7 @@ const satelliteStyle = {
 export const LOOKS = {
   satellite: {
     name: "Satellite", blurb: "Real aerial photos draped over Bradford's hills, with buildings standing up out of them.",
-    style: satelliteStyle, exaggeration: 1.6,
+    style: satelliteStyle, exaggeration: 1.6, routeInk: "#ffe08a", glow: 0.95,
     buildings: { color: "#eee8dc", opacity: 0.55 },
     sky: { "sky-color": "#6fa8dc", "horizon-color": "#dcecf7", "fog-color": "#dfe9ef" },
     stopInk: "#10151d",
@@ -38,7 +40,7 @@ export const LOOKS = {
   golden: {
     name: "Golden hour", blurb: "A warm, low autumn sun over a miniature city, with the edges softly out of focus like a model railway.",
     style: `${OFM}/styles/liberty`, exaggeration: 1.6, hillshade: { shadow: "#7a4b2a", highlight: "#fff1d6", strength: 0.6 },
-    buildings: { color: "#f3dfc4", opacity: 0.95 }, light: { position: [1.4, 245, 22], color: "#ffd7a1", intensity: 0.6 },
+    buildings: { color: "#f4ecdd", opacity: 0.95 }, light: { position: [1.4, 245, 22], color: "#ffecd0", intensity: 0.4 },
     sky: { "sky-color": "#f0a868", "horizon-color": "#ffe1b8", "fog-color": "#fde9d2" },
     tiltShift: true, stopInk: "#3a2210",
   },
@@ -52,7 +54,7 @@ export const LOOKS = {
   street: {
     name: "Street map", blurb: "A clean, colourful street map with 3D buildings and terrain.",
     style: `${OFM}/styles/liberty`, exaggeration: 1.6, hillshade: { shadow: "#3d4a3a", highlight: "#fffbe8", strength: 0.45 },
-    buildings: { color: "#ece6d8", opacity: 0.95 }, light: { position: [1.3, 215, 35], color: "#fff6e0", intensity: 0.45 },
+    buildings: { color: "#f3f1ec", opacity: 0.95 }, light: { position: [1.3, 215, 35], color: "#ffffff", intensity: 0.3 },
     sky: { "sky-color": "#a9c7e8", "horizon-color": "#f3e3c3", "fog-color": "#eef1ec" },
     stopInk: "#1a1206",
   },
@@ -98,8 +100,9 @@ export function createMap(containerId, { reduceMotion, startClose, look = LOOKS.
     // the route glows like the blind: a soft amber halo with a dark core
     map.addLayer({ id: "route-glow", type: "line", source: "route", layout: { "line-join": "round", "line-cap": "round" },
       paint: { "line-color": LED, "line-width": ["interpolate", ["linear"], ["zoom"], 10, 8, 14, 14, 17, 12], "line-blur": 6, "line-opacity": look.glow ?? 0.5 } })
+    const ink = look.routeInk ?? (look.dark ? "#ffd27a" : "#1a1206")
     map.addLayer({ id: "route-core", type: "line", source: "route", layout: { "line-join": "round", "line-cap": "round" },
-      paint: { "line-color": look.dark ? "#ffd27a" : "#1a1206", "line-width": ["interpolate", ["linear"], ["zoom"], 10, 2, 15, 4] } })
+      paint: { "line-color": ink, "line-width": ["interpolate", ["linear"], ["zoom"], 10, 2, 15, 4] } })
     map.addLayer({ id: "stop-dots", type: "circle", source: "stops", minzoom: 12.5, filter: ["!=", ["get", "mine"], true],
       paint: { "circle-radius": 4, "circle-color": look.dark ? "#15120c" : "#fff", "circle-stroke-color": look.stopInk, "circle-stroke-width": 2, "circle-pitch-alignment": "map" } })
     map.addLayer({ id: "stop-names", type: "symbol", source: "stops", minzoom: 14.5,
@@ -107,9 +110,11 @@ export function createMap(containerId, { reduceMotion, startClose, look = LOOKS.
       paint: { "text-color": look.dark ? "#ffd27a" : "#1a1206", "text-halo-color": look.dark ? "#000" : "#fff", "text-halo-width": 1.5 } })
     map.addLayer({ id: "my-stop", type: "fill-extrusion", source: "stops", filter: ["==", ["get", "mine"], true],
       paint: { "fill-extrusion-color": LED, "fill-extrusion-height": 70, "fill-extrusion-base": 0, "fill-extrusion-opacity": 0.95 } })
-    map.addLayer({ id: "buses-3d", type: "fill-extrusion", source: "buses",
-      paint: { "fill-extrusion-color": ["get", "c"], "fill-extrusion-base": ["get", "b"], "fill-extrusion-height": ["get", "h"],
-        "fill-extrusion-opacity": 1, "fill-extrusion-vertical-gradient": true } })
+    fleet = busLayer("buses-3d", scaleAt, look.dark)
+    map.addLayer(fleet)
+    // the models can't be clicked, so an almost invisible circle under each bus takes the taps
+    map.addLayer({ id: "buses-hit", type: "circle", source: "buses",
+      paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, 7, 13, 14, 17, 30], "circle-opacity": 0.01 } })
     map.addLayer({ id: "you-dot", type: "circle", source: "you",
       paint: { "circle-radius": 9, "circle-color": "#2f6bd8", "circle-stroke-color": "#fff", "circle-stroke-width": 3, "circle-pitch-alignment": "map" } })
     resolve()
@@ -121,53 +126,20 @@ export function createMap(containerId, { reduceMotion, startClose, look = LOOKS.
 export const empty = () => ({ type: "FeatureCollection", features: [] })
 export const point = (lon, lat, props = {}) => ({ type: "Feature", geometry: { type: "Point", coordinates: [lon, lat] }, properties: props })
 
-// One double-decker as stacked boxes (metres before scaling): skirt, lower deck, glass, band, upper glass, roof, and
-// the lit destination blind on the front. Each box is a polygon footprint with its own base and top.
-const PARTS = [
-  // [from rear, to front, half width, base, top, colour]  (null colour = the bus's status colour)
-  [-5.6, 5.6, 1.22, 0, 0.5, SKIRT],
-  [-5.6, 5.6, 1.27, 0.5, 2.0, null],
-  [-5.5, 5.5, 1.24, 2.0, 2.7, GLASS],
-  [-5.6, 5.6, 1.27, 2.7, 3.0, null],
-  [-5.5, 5.4, 1.24, 3.0, 3.85, GLASS],
-  [-5.6, 5.45, 1.2, 3.85, 4.4, null],
-  [5.45, 5.75, 0.9, 3.25, 3.75, LED],
-]
-
-export function busFeatures(bus, scale) {
-  const { lon, lat, heading, colour, id, routeId, label } = bus
-  const th = (heading * Math.PI) / 180, fx = Math.sin(th), fy = Math.cos(th), rx = fy, ry = -fx
-  const kx = 1 / (111320 * Math.cos((lat * Math.PI) / 180)), ky = 1 / 110540
-  const at = (along, side) => [lon + (fx * along + rx * side) * scale * kx, lat + (fy * along + ry * side) * scale * ky]
-  return PARTS.map(([a0, a1, w, b, h, c]) => ({
-    type: "Feature",
-    properties: { id, r: routeId, label, c: c || colour, b: b * scale, h: h * scale },
-    geometry: { type: "Polygon", coordinates: [[at(a0, -w), at(a1, -w), at(a1, w), at(a0, w), at(a0, -w)]] },
-  }))
-}
-
 // Glide buses from where they were to where they are now, instead of jumping every 20 seconds.
 export function animateBuses(map, from, to, ms, reduceMotion) {
-  const src = map.getSource("buses")
-  const start = performance.now(), prev = new Map(from.map((b) => [b.id, b])), scale = scaleAt(map.getZoom())
+  const start = performance.now(), prev = new Map(from.map((b) => [b.id, b]))
   const lerpAngle = (a, b, t) => a + ((((b - a) % 360) + 540) % 360 - 180) * t
+  map.getSource("buses").setData({ type: "FeatureCollection", features: to.map((b) => point(b.lon, b.lat, { id: b.id, r: b.routeId })) })
   const frame = (now) => {
     const t = reduceMotion ? 1 : Math.min(1, (now - start) / ms), e = t * (2 - t)
-    const feats = to.flatMap((b) => {
+    fleet.set(to.map((b) => {
       const p = prev.get(b.id)
-      if (!p) return busFeatures(b, scale)
-      return busFeatures({ ...b, lon: p.lon + (b.lon - p.lon) * e, lat: p.lat + (b.lat - p.lat) * e, heading: lerpAngle(p.heading, b.heading, e) }, scale)
-    })
-    src.setData({ type: "FeatureCollection", features: feats })
+      return p ? { ...b, lon: p.lon + (b.lon - p.lon) * e, lat: p.lat + (b.lat - p.lat) * e, heading: lerpAngle(p.heading, b.heading, e) } : b
+    }))
     if (t < 1) requestAnimationFrame(frame)
   }
   requestAnimationFrame(frame)
-}
-
-// Rebuild the buses at the right size after zooming.
-export function rescale(map, buses) {
-  const scale = scaleAt(map.getZoom())
-  map.getSource("buses")?.setData({ type: "FeatureCollection", features: buses.flatMap((b) => busFeatures(b, scale)) })
 }
 
 // A floating mini destination blind above a bus: the page's hero element, repeated in the city.

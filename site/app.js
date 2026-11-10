@@ -1,5 +1,5 @@
 import { clock, etaAt, locate, londonDate, serviceDayStart, verdict } from "./match.js"
-import { COLOURS, LOOKS, animateBuses, createMap, empty, point, rescale, tag } from "./map3d.js"
+import { COLOURS, LOOKS, animateBuses, createMap, empty, point, tag } from "./map3d.js"
 import { busSvg, opColour, toast } from "./ui.js"
 
 const params = new URLSearchParams(location.search)
@@ -55,14 +55,13 @@ ready.then(() => {
   }
   // the globe is for the arrival; once down at street level a flat map is cheaper and can draw the horizon haze
   map.once("moveend", () => map.setProjection({ type: "mercator" }))
-  map.on("zoomend", () => rescale(map, shown))
-  map.on("click", "buses-3d", (e) => {
+  map.on("click", "buses-hit", (e) => {
     const p = e.features[0].properties
     if (current && p.id) select(p.id, true)
     else if (p.r && byId.has(p.r)) pickRoute(byId.get(p.r))
   })
-  map.on("mouseenter", "buses-3d", () => (map.getCanvas().style.cursor = "pointer"))
-  map.on("mouseleave", "buses-3d", () => (map.getCanvas().style.cursor = ""))
+  map.on("mouseenter", "buses-hit", () => (map.getCanvas().style.cursor = "pointer"))
+  map.on("mouseleave", "buses-hit", () => (map.getCanvas().style.cursor = ""))
 })
 
 function placeBuses(next, withTags) {
