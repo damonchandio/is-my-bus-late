@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-128 hourly samples between 2026-10-28 and 2026-11-10, 2,192,048 measurements at stops, 111,931 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+129 hourly samples between 2026-10-28 and 2026-11-10, 2,192,048 measurements at stops, 111,931 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -20,7 +20,7 @@
 | T8 | TLC Travel | 7.4 | 54.9% | 6.6% | 38.4% | 43 |
 | X70 | Connexions Buses | 7.3 | 51.1% | 2.0% | 46.9% | 128 |
 | 351 | First South Yorkshire | 7.2 | 45.5% | 3.8% | 50.8% | 51 |
-| 679 | TLC Travel | 7.1 | 40.5% | 2.5% | 57.0% | 76 |
+| 394 | Stotts Coaches | 7.1 | 57.6% | 3.3% | 39.2% | 61 |
 
 ## The 10 most punctual routes
 
@@ -32,10 +32,10 @@
 | 101 | Globe Coaches | 0.1 | 6.6% | 32.0% | 61.4% | 69 |
 | 42 | First Leeds | 0.1 | 6.9% | 31.1% | 62.1% | 1128 |
 | 444 | Arriva Yorkshire | 0.1 | 6.5% | 30.9% | 62.6% | 494 |
-| 120 | Globe Coaches | 0.2 | 3.6% | 32.1% | 64.4% | 40 |
 | 177 | Globe Coaches | 0.2 | 4.9% | 28.5% | 66.6% | 79 |
+| 120 | Globe Coaches | 0.2 | 3.6% | 32.1% | 64.4% | 40 |
 | T2 | TLC Travel | 0.3 | 9.2% | 18.4% | 72.4% | 53 |
-| 543 | First Halifax | 0.4 | 6.8% | 29.9% | 63.2% | 311 |
+| DTB | Station Coaches | 0.4 | 13.9% | 31.0% | 55.1% | 69 |
 
 ## By operator
 
