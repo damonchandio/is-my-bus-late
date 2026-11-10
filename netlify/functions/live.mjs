@@ -2,7 +2,7 @@
 // can't read it directly; this function fetches it, keeps West Yorkshire, and returns compact JSON.
 //   /api/live            every bus in the box (lat, lon, route id) for the overview map
 //   /api/live?route=ID   buses on one route, with trip ids for timetable matching
-import { inflateRawSync } from "node:zlib"
+// Web APIs only, so the same file runs on Netlify Functions and on Supabase Edge Functions (supabase/functions/bus-live).
 
 const FEED = "https://data.bus-data.dft.gov.uk/avl/download/gtfsrt"
 const BOX = [53.52, -2.18, 53.96, -1.2] // same West Yorkshire box as pipeline/fetch.py
@@ -13,7 +13,7 @@ let cache = { at: 0, buses: [] }
 export default async (req) => {
   const route = new URL(req.url).searchParams.get("route")
   try {
-    if (Date.now() - cache.at > 20_000) cache = { at: Date.now(), buses: decode(unzip(await download())) }
+    if (Date.now() - cache.at > 20_000) cache = { at: Date.now(), buses: decode(await unzip(await download())) }
   } catch (e) {
     if (!cache.buses.length) return Response.json({ error: "The live bus feed is not responding. Try again in a minute." }, { status: 502 })
   }
@@ -45,14 +45,23 @@ async function download(tries = 3) {
 }
 
 // The zip holds one file, gtfsrt.bin. Read its local header and inflate the data that follows.
-export function unzip(z) {
+export async function unzip(z) {
   const v = new DataView(z.buffer, z.byteOffset)
   if (v.getUint32(0, true) !== 0x04034b50) throw new Error("not a zip")
-  const method = v.getUint16(8, true), size = v.getUint32(18, true)
+  const method = v.getUint16(8, true)
+  let size = v.getUint32(18, true)
   const start = 30 + v.getUint16(26, true) + v.getUint16(28, true)
-  // size is 0 when the zip uses a data descriptor; inflate stops at the end of the deflate stream anyway
-  const data = z.subarray(start, size ? start + size : undefined)
-  return method === 0 ? data : new Uint8Array(inflateRawSync(data))
+  // size is 0 when the zip uses a data descriptor: read it from the central directory at the end of the file,
+  // because DecompressionStream rejects anything after the deflate stream
+  if (!size) {
+    let e = z.length - 22
+    while (e > 0 && v.getUint32(e, true) !== 0x06054b50) e--
+    size = v.getUint32(v.getUint32(e + 16, true) + 20, true)
+  }
+  const data = z.subarray(start, start + size)
+  if (method === 0) return data
+  const inflated = new Blob([data]).stream().pipeThrough(new DecompressionStream("deflate-raw"))
+  return new Uint8Array(await new Response(inflated).arrayBuffer())
 }
 
 // Minimal protobuf reader for the GTFS-RT fields we need (field numbers from gtfs-realtime.proto).

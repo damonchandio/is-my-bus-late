@@ -7,7 +7,8 @@ const REPO = "https://raw.githubusercontent.com/damonchandio/is-my-bus-late"
 // per-route timetables: rebuilt daily on the site-data branch; a copy ships with each deploy as a fallback
 let DATA = params.get("data") || `${REPO}/site-data`
 const STATS = params.get("stats") || `${REPO}/main/data/stats.json` // hourly samples, for the "usually" line
-const LIVE = params.get("live") || "/api/live"
+// the relay that reads the DfT feed (netlify/functions/live.mjs), hosted as a Supabase Edge Function
+const LIVE = params.get("live") || "https://ibrmcqqxowzhpjgfmmsx.supabase.co/functions/v1/bus-live"
 const REFRESH_MS = 20_000, GLIDE_MS = 1600, NEAR_M = 700
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches
 
