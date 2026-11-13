@@ -1,0 +1,319 @@
+route,operator,n,trips,delay_sum,n_over5,n_early,n_ontime,run_median
+372,"First Halifax, Calder Valley & Huddersfield",142,7,23772.0,53,21,68,179.0
+324,"First Halifax, Calder Valley & Huddersfield",162,11,11441.0,5,11,146,73.5
+2,First Leeds,328,15,56093.0,83,40,205,131.0
+75,First Leeds,88,3,34378.0,42,8,38,247.5
+X84,First Leeds,200,8,24925.0,43,40,117,84.0
+24,First Leeds,333,14,21215.0,49,94,190,22.0
+56,First Leeds,583,22,109228.0,216,95,272,175.0
+19,First Leeds,136,6,39596.0,31,1,104,138.0
+116,First Leeds,113,4,200563.0,113,0,0,1696.0
+14,First Leeds,117,8,3539.0,8,28,81,13.0
+5,First Leeds,187,9,30770.0,46,27,114,84.0
+22,First Leeds,70,6,8830.0,13,10,47,121.0
+7,Globe Coaches,10,2,10378.0,10,0,0,1063.0
+9C,Squarepeg,102,4,66090.0,61,7,34,977.0
+476,Arriva Yorkshire,22,1,2938.0,3,1,18,128.5
+250,Arriva Yorkshire,30,2,27402.0,30,0,0,886.5
+126,Arriva Yorkshire,239,12,33702.0,37,11,191,127.0
+A2,Flyer,101,4,12245.0,14,4,83,129.0
+200,Arriva Yorkshire,194,10,362054.0,182,0,12,2240.0
+163,Arriva Yorkshire,256,12,86306.0,73,51,132,78.5
+156,Arriva Yorkshire,110,9,6951.0,0,17,93,73.0
+444,Arriva Yorkshire,174,6,54334.0,75,28,71,193.0
+2,Stagecoach Yorkshire,15,2,28500.0,15,0,0,1330.0
+595,TLC Travel,49,4,26969.0,31,0,18,727.0
+232,Arriva Yorkshire,112,4,10394.0,12,26,74,80.0
+22X,Stagecoach Yorkshire,48,9,26212.0,33,4,11,615.0
+571,East Yorkshire,120,7,24560.0,34,4,82,177.5
+226,Stagecoach Yorkshire,40,4,20120.0,25,3,12,434.0
+M6,The Burnley Bus Company,73,5,60767.0,60,1,12,972.0
+141,Arriva Yorkshire,159,9,63965.0,64,13,82,204.0
+147,Arriva Yorkshire,97,5,9555.0,16,16,65,23.0
+271,Arriva Yorkshire,30,2,5208.0,4,0,26,143.5
+D1,Team Pennine,200,9,13781.0,12,33,155,70.5
+561,Team Pennine,55,2,22203.0,35,1,19,480.0
+21,Team Pennine,48,5,5693.0,7,6,35,114.0
+22,Team Pennine,44,3,13639.0,25,4,15,372.5
+K9,The Keighley Bus Company,51,4,12799.0,15,2,34,206.0
+617,First Bradford,142,5,-12307.0,0,58,84,-42.0
+641,First Bradford,106,4,-2004.0,3,30,73,-34.0
+620,First Bradford,231,8,21590.0,57,73,101,68.0
+607,First Bradford,113,9,34357.0,26,10,77,72.0
+622,First Bradford,93,5,2445.0,3,20,70,17.0
+508,First Halifax,93,4,88278.0,90,0,3,775.0
+548,First Halifax,113,6,28452.0,43,1,69,223.0
+370,"First Halifax, Calder Valley & Huddersfield",119,6,37555.0,55,31,33,144.0
+310,"First Halifax, Calder Valley & Huddersfield",71,5,34780.0,44,1,26,322.0
+356,"First Halifax, Calder Valley & Huddersfield",31,2,35757.0,31,0,0,1162.0
+39,First Leeds,56,5,9116.0,22,4,30,146.5
+7A,First Leeds,103,6,7190.0,6,15,82,67.0
+107,Arriva Yorkshire,42,3,1549.0,0,7,35,23.5
+22A,Stagecoach Yorkshire,50,2,-2110.0,0,10,40,-41.0
+93,Stagecoach Yorkshire,29,2,2246.0,3,1,25,20.0
+95,Stagecoach Yorkshire,34,3,-110.0,1,9,24,20.0
+205,A Lyles and Son,42,2,37294.0,42,0,0,956.0
+K5,The Keighley Bus Company,15,2,296.0,0,3,12,11.0
+642,First Bradford,59,6,4498.0,0,0,59,77.0
+522,First Halifax,62,3,3112.0,11,18,33,25.0
+175,Arriva Yorkshire,34,2,24271.0,33,0,1,677.5
+840,Coastliner,40,3,28769.0,27,5,8,801.0
+21,Stagecoach Yorkshire,18,1,1500.0,0,0,18,80.0
+534,Team Pennine,29,1,10495.0,12,0,17,259.0
+K3,The Keighley Bus Company,48,4,11672.0,8,0,40,145.0
+613,First Bradford,33,1,4421.0,0,2,31,187.0
+198,Globe Coaches,25,1,2820.0,0,0,25,118.0
+105,Arriva Yorkshire,34,4,9201.0,16,0,18,258.0
+546,Team Pennine,27,1,13597.0,21,3,3,493.0
+11,Connexions Buses,52,3,10071.0,20,5,27,249.0
+T1,TLC Travel,22,2,1599.0,2,5,15,19.0
+D3,Team Pennine,19,1,2303.0,1,0,18,146.0
+8,21 Transport,17,2,825.0,0,1,16,45.0
+378,TLC Travel,45,2,16378.0,24,0,21,424.0
+6,Stagecoach Yorkshire,27,1,8661.0,8,2,17,253.0
+358,"First Halifax, Calder Valley & Huddersfield",26,1,6587.0,2,0,24,162.0
+SK4,The Keighley Bus Company,7,1,5042.0,7,0,0,725.0
+27A,Stagecoach Yorkshire,1,1,11.0,0,0,1,11.0
+361,First South Yorkshire,1,1,2062.0,1,0,0,2062.0
+549,"First Halifax, Calder Valley & Huddersfield",187,6,57900.0,115,19,53,384.0
+308,"First Halifax, Calder Valley & Huddersfield",100,6,16663.0,12,2,86,120.5
+3A,First Leeds,141,7,33735.0,50,10,81,144.0
+74,First Leeds,85,4,3440.0,10,20,55,4.0
+33,First Leeds,171,7,-8416.0,16,60,95,16.0
+38,First Leeds,111,5,28035.0,32,0,79,186.0
+42,First Leeds,285,13,1474.0,8,74,203,12.0
+13,First Leeds,164,8,47593.0,66,12,86,196.0
+23,First Leeds,260,10,9075.0,19,42,199,19.5
+4,First Leeds,198,8,38935.0,42,16,140,128.0
+7S,First Leeds,103,5,20898.0,41,21,41,141.0
+15,First Leeds,104,6,9363.0,0,6,98,79.0
+104,Arriva Yorkshire,55,5,23694.0,44,0,11,440.0
+662,The Keighley Bus Company,282,15,80009.0,99,11,172,136.0
+62,The Keighley Bus Company,133,8,15689.0,15,21,97,123.0
+195,Arriva Yorkshire,114,7,17111.0,35,9,70,61.5
+196,Arriva Yorkshire,80,5,6426.0,0,4,76,81.0
+A3,Flyer,118,5,57497.0,54,11,53,259.5
+X1,Team Pennine,88,4,16999.0,29,5,54,186.0
+B1,The Keighley Bus Company,47,3,5966.0,2,3,42,83.0
+66,Stagecoach Yorkshire,17,4,2655.0,4,0,13,18.0
+140,Arriva Yorkshire,186,8,74941.0,83,11,92,255.5
+268,Arriva Yorkshire,509,22,143418.0,207,126,176,134.0
+526,Team Pennine,68,3,57574.0,60,0,8,1098.0
+574,Team Pennine,56,3,34631.0,20,2,34,79.0
+110,Arriva Yorkshire,205,13,85349.0,130,18,57,443.0
+X98,East Yorkshire,71,2,-24.0,5,23,43,-1.0
+112,East Yorkshire,31,2,3813.0,5,0,26,83.0
+20,Stagecoach Yorkshire,29,3,22462.0,22,0,7,853.0
+189,Arriva Yorkshire,82,6,21840.0,38,9,35,259.0
+T2,TLC Travel,6,1,-634.0,0,4,2,-135.5
+843,Coastliner,81,5,37165.0,40,0,41,266.0
+587,Team Pennine,93,4,27768.0,28,6,59,87.0
+637,First Bradford,55,3,-1776.0,0,27,28,-45.0
+72,First Bradford,274,14,8417.0,24,92,158,17.0
+X11,First Bradford,112,6,17388.0,39,17,56,139.0
+X6,First Bradford,105,11,8140.0,26,27,52,74.0
+608,First Bradford,111,6,10672.0,22,26,63,118.0
+591,First Halifax,121,6,42500.0,60,12,49,167.0
+576,First Halifax,253,13,61256.0,101,45,107,132.0
+510,First Halifax,33,2,24839.0,18,0,15,1144.0
+579,First Halifax,108,5,26104.0,32,3,73,195.0
+X63,"First Halifax, Calder Valley & Huddersfield",145,13,86842.0,100,18,27,503.0
+301,"First Halifax, Calder Valley & Huddersfield",64,4,29772.0,33,1,30,342.0
+306,"First Halifax, Calder Valley & Huddersfield",67,4,1986.0,1,13,53,15.0
+174A,Arriva Yorkshire,26,1,13395.0,26,0,0,499.5
+B2,The Keighley Bus Company,43,3,5046.0,0,0,43,130.0
+38,Stagecoach Yorkshire,77,4,74994.0,61,0,16,1162.0
+20,Team Pennine,54,5,2989.0,3,13,38,82.5
+254,Arriva Yorkshire,117,6,145944.0,109,0,8,1037.0
+61A,East Yorkshire,35,2,5510.0,12,1,22,85.0
+120,The Burnley Bus Company,27,1,48815.0,27,0,0,1876.0
+59,Stagecoach Yorkshire,42,2,1783.0,5,8,29,-44.0
+K15,The Keighley Bus Company,10,1,376.0,0,0,10,41.0
+596,TLC Travel,49,4,11843.0,15,0,34,202.0
+343,Team Pennine,106,4,77422.0,79,2,25,481.5
+618,First Bradford,103,4,-133.0,5,31,67,9.0
+513,First Halifax,49,2,18804.0,13,0,36,135.0
+102,Arriva Yorkshire,24,2,-2370.0,3,7,14,72.5
+57,Stagecoach Yorkshire,21,2,1500.0,0,5,16,134.0
+22,Connexions Buses,15,1,2115.0,0,0,15,134.0
+X10,Arriva Yorkshire,34,3,14341.0,18,0,16,338.0
+64,The Keighley Bus Company,25,3,5989.0,10,0,15,208.0
+K12,The Keighley Bus Company,7,1,1205.0,0,0,7,161.0
+X17,Stagecoach Yorkshire,9,1,8397.0,9,0,0,923.0
+511,First Halifax,27,2,5443.0,0,0,27,197.0
+SK5,The Keighley Bus Company,21,1,3312.0,0,0,21,165.0
+280,Stagecoach Cumbria and North Lancashire,15,1,23775.0,15,0,0,1577.0
+280,Arriva Yorkshire,35,3,38209.0,32,0,3,1274.0
+72,The Keighley Bus Company,6,1,2343.0,5,0,1,408.0
+X70,Connexions Buses,11,2,6195.0,5,0,6,189.0
+412,Connexions Buses,2,1,-82.0,0,0,2,-41.0
+11,Stagecoach Yorkshire,9,1,10845.0,9,0,0,980.0
+387,"First Halifax, Calder Valley & Huddersfield",5,1,-323.0,0,2,3,-43.0
+T4,TLC Travel,2,1,43.0,0,0,2,21.5
+PR2,First Leeds,60,6,3651.0,2,24,34,-45.0
+PR1,First Leeds,68,7,-10704.0,0,43,25,-134.5
+28,First Leeds,72,4,21006.0,42,1,29,342.5
+12,First Leeds,407,15,53442.0,93,101,213,27.0
+27,First Leeds,132,7,129899.0,79,0,53,324.0
+47,First Leeds,118,3,134253.0,44,18,56,25.0
+86,First Leeds,74,4,-3688.0,1,37,36,-71.0
+16,First Leeds,450,16,84800.0,129,64,257,144.0
+49,First Leeds,289,12,10422.0,29,77,183,5.0
+7,First Leeds,100,6,-59.0,0,23,77,10.0
+PR3,First Leeds,48,7,1578.0,1,7,40,18.5
+91,First Leeds,185,7,64691.0,88,13,84,265.0
+39,Globe Coaches,37,1,-4321.0,4,24,9,-101.0
+106,Arriva Yorkshire,195,12,45653.0,63,10,122,149.0
+149,Arriva Yorkshire,207,7,93390.0,123,20,64,443.0
+118,Arriva Yorkshire,74,4,34689.0,63,0,11,430.5
+660,TLC Travel,78,3,34188.0,71,0,7,440.0
+A1,Flyer,93,6,9611.0,17,15,61,24.0
+283,Arriva Yorkshire,167,7,57179.0,84,30,53,305.0
+NC5,The Burnley Bus Company,17,1,2105.0,4,1,12,72.0
+231,Arriva Yorkshire,110,4,40075.0,53,4,53,260.5
+202,Arriva Yorkshire,134,6,71117.0,73,19,42,470.0
+203,Arriva Yorkshire,203,10,323306.0,200,0,3,855.0
+281,Arriva Yorkshire,110,7,102631.0,59,10,41,318.0
+496,Arriva Yorkshire,316,16,43968.0,63,61,192,75.5
+212,East Yorkshire,128,4,104252.0,84,5,39,645.5
+157,Arriva Yorkshire,80,5,62601.0,66,0,14,957.5
+901A,TLC Travel,25,2,9024.0,18,0,7,428.0
+27B,Stagecoach Yorkshire,54,2,9253.0,10,3,41,149.5
+219,Stagecoach Yorkshire,37,3,-893.0,2,14,21,-49.0
+217,Stagecoach Yorkshire,24,2,11506.0,22,0,2,433.0
+K14,The Keighley Bus Company,27,1,-995.0,0,8,19,-22.0
+K4,The Keighley Bus Company,91,4,13846.0,4,4,83,147.0
+K2,The Keighley Bus Company,42,2,4019.0,1,1,40,130.5
+D2,Team Pennine,46,3,5003.0,4,9,33,129.0
+K1,The Keighley Bus Company,47,4,18733.0,31,0,16,441.0
+64,Connexions Buses,81,6,55606.0,63,3,15,674.0
+680,First Bradford,70,4,42048.0,56,0,14,700.0
+612,First Bradford,223,12,37089.0,39,11,173,133.0
+626,First Bradford,102,5,30143.0,43,14,45,191.0
+687,First Bradford,88,5,9992.0,8,1,79,83.0
+512,First Halifax,53,2,7567.0,7,2,44,145.0
+501,First Halifax,226,14,56019.0,77,23,126,80.0
+371,"First Halifax, Calder Valley & Huddersfield",104,5,-4297.0,4,49,51,-50.5
+328,"First Halifax, Calder Valley & Huddersfield",219,11,341.0,5,58,156,17.0
+316,"First Halifax, Calder Valley & Huddersfield",73,4,51594.0,42,4,27,504.0
+40,First Leeds,192,12,18969.0,29,32,131,60.5
+81,Squarepeg,44,4,9650.0,17,2,25,254.5
+394,Stotts Coaches,23,1,29865.0,23,0,0,1213.0
+249,Globe Coaches,19,1,2790.0,0,0,19,136.0
+7,The Harrogate Bus Company,152,7,73249.0,102,2,48,421.5
+60A,The Keighley Bus Company,108,5,71998.0,45,2,61,249.0
+27,Stagecoach Yorkshire,52,4,10694.0,13,12,27,138.0
+28,Stagecoach Yorkshire,85,5,700.0,3,25,57,7.0
+229,Arriva Yorkshire,166,15,316235.0,124,4,38,1217.5
+213,East Yorkshire,69,3,73567.0,68,0,1,906.0
+678,TLC Travel,33,2,8073.0,16,4,13,239.0
+671,First Bradford,63,4,-2659.0,0,22,41,-32.0
+55,First Leeds,66,3,19671.0,36,2,28,312.5
+96A,Globe Holidays,20,1,15649.0,20,0,0,769.0
+965,Connexions Buses,37,3,11547.0,21,0,16,379.0
+542,First Halifax,53,5,3883.0,1,5,47,83.0
+314,"First Halifax, Calder Valley & Huddersfield",39,1,12845.0,28,0,11,363.0
+H1,Stotts Coaches,11,1,2902.0,4,0,7,259.0
+901,TLC Travel,23,1,7416.0,17,0,6,361.0
+502,Team Pennine,75,4,12916.0,22,1,52,146.0
+537,"First Halifax, Calder Valley & Huddersfield",84,4,9757.0,4,0,80,83.0
+530,Team Pennine,18,2,3399.0,7,1,10,219.5
+335,Stotts Coaches,30,2,12291.0,12,0,18,239.0
+911,Stotts Coaches,33,1,1800.0,0,1,32,74.0
+493,Arriva Yorkshire,24,2,3051.0,4,1,19,75.5
+923,Connexions Buses,9,1,5781.0,9,0,0,618.0
+902,TLC Travel,6,1,5950.0,6,0,0,989.0
+384,Stotts Coaches,19,1,3692.0,4,0,15,128.0
+1,Stagecoach Yorkshire,5,2,4140.0,1,0,4,192.0
+12,Stagecoach Yorkshire,12,1,-5124.0,0,12,0,-367.0
+230,Arriva Yorkshire,9,1,3351.0,9,0,0,367.0
+H6,Stotts Coaches,7,1,3577.0,7,0,0,501.0
+263,TLC Travel,3,1,7770.0,3,0,0,2591.0
+13A,First Leeds,184,9,18163.0,32,43,109,86.5
+3,First Leeds,142,7,30417.0,33,27,82,86.0
+25,First Leeds,71,4,25407.0,40,3,28,375.0
+52,First Leeds,89,5,44214.0,45,4,40,309.0
+34,First Leeds,203,8,5072.0,29,50,124,59.0
+4F,First Leeds,174,7,-8553.0,3,72,99,-43.0
+65,First Leeds,72,2,37172.0,50,0,22,491.5
+50A,First Leeds,218,7,5681.0,37,84,97,7.0
+50,First Leeds,159,6,12334.0,28,25,106,24.0
+19A,First Leeds,132,4,22546.0,43,33,56,22.0
+62,First Leeds,39,2,9013.0,23,3,13,317.0
+96,Globe Holidays,37,2,186.0,0,11,26,11.0
+X20,Globe Coaches,12,1,2815.0,0,0,12,243.5
+9,Squarepeg,111,4,75746.0,79,5,27,539.0
+962,Connexions Buses,87,3,77990.0,55,13,19,916.0
+148,Arriva Yorkshire,181,9,22750.0,41,34,106,20.0
+122,Arriva Yorkshire,119,9,24782.0,29,10,80,111.0
+67,The Keighley Bus Company,115,5,19002.0,31,14,70,159.0
+B3,The Keighley Bus Company,69,4,57314.0,47,0,22,611.0
+425,Arriva Yorkshire,233,9,154648.0,153,16,64,797.0
+644,TLC Travel,40,1,62600.0,40,0,0,868.0
+66,The Keighley Bus Company,83,6,23090.0,29,14,40,132.0
+255,Arriva Yorkshire,120,6,70763.0,60,12,48,286.5
+164,Arriva Yorkshire,99,5,76961.0,88,0,11,559.0
+577,Team Pennine,87,3,98237.0,69,2,16,549.0
+446,Arriva Yorkshire,176,8,37448.0,44,13,119,25.0
+36,The Harrogate Bus Company,238,14,55314.0,84,13,141,197.0
+633,East Yorkshire,145,7,27893.0,39,25,81,139.0
+C1,The Burnley Bus Company,14,1,11112.0,14,0,0,794.5
+606,TLC Travel,23,2,7735.0,10,1,12,297.0
+M4,The Burnley Bus Company,123,5,70081.0,72,6,45,448.0
+60,The Keighley Bus Company,258,11,91323.0,101,10,147,246.5
+SK2,The Keighley Bus Company,9,1,5840.0,9,0,0,637.0
+7,The Burnley Bus Company,8,2,7688.0,8,0,0,984.5
+676,TLC Travel,74,4,11060.0,10,7,57,196.5
+165,Arriva Yorkshire,114,5,97344.0,91,0,23,914.5
+168,Arriva Yorkshire,113,7,12022.0,16,13,84,131.0
+32,Stagecoach Yorkshire,53,6,15853.0,15,16,22,137.0
+360,Team Pennine,58,4,9360.0,5,3,50,196.0
+K7,The Keighley Bus Company,119,7,10349.0,9,14,96,67.0
+563,Team Pennine,64,3,3119.0,1,9,54,24.0
+205,TLC Travel,78,3,119335.0,74,0,4,1538.5
+614,First Bradford,38,2,11970.0,4,6,28,-32.0
+640,First Bradford,108,4,-3684.0,0,30,78,6.5
+645,First Bradford,282,9,33282.0,44,59,179,81.0
+686,First Bradford,124,6,26803.0,43,0,81,255.0
+636,First Bradford,72,4,-2558.0,1,34,37,-39.0
+681,First Bradford,140,7,54992.0,91,8,41,487.0
+590,First Halifax,160,6,77620.0,97,13,50,403.5
+523,First Halifax,73,4,466.0,1,16,56,19.0
+521,First Halifax,126,6,20264.0,32,7,87,170.0
+592,First Halifax,78,3,20459.0,25,0,53,205.0
+586,First Halifax,33,2,28159.0,17,0,16,1443.0
+X1,First Halifax,109,10,48463.0,48,18,43,198.0
+382,"First Halifax, Calder Valley & Huddersfield",69,4,55538.0,51,0,18,1034.0
+302,"First Halifax, Calder Valley & Huddersfield",88,4,36716.0,49,11,28,381.5
+51,First Leeds,89,5,33923.0,40,3,46,256.0
+485,Globe Coaches,39,4,5197.0,6,7,26,19.0
+103,Arriva Yorkshire,65,4,7857.0,16,13,36,72.0
+174,Arriva Yorkshire,32,2,590.0,2,4,26,0.5
+261,Arriva Yorkshire,104,5,90311.0,78,8,18,940.5
+377,TLC Travel,33,3,15792.0,18,0,15,600.0
+187,Arriva Yorkshire,41,1,3674.0,0,6,35,132.0
+201,Arriva Yorkshire,64,5,134130.0,64,0,0,2235.0
+656,TLC Travel,49,2,26424.0,40,0,9,552.0
+562,Team Pennine,76,2,39278.0,44,4,28,660.0
+X99,East Yorkshire,49,4,2211.0,0,6,43,58.0
+135,Arriva Yorkshire,25,1,1170.0,0,2,23,113.0
+218,Stagecoach Yorkshire,18,1,11742.0,18,0,0,669.0
+219A,Stagecoach Yorkshire,4,1,1860.0,4,0,0,495.0
+383,"First Halifax, Calder Valley & Huddersfield",124,6,74923.0,76,0,48,507.5
+602,TLC Travel,23,1,54.0,0,4,19,15.0
+203,Stagecoach Yorkshire,14,1,4416.0,11,0,3,316.5
+303,Team Pennine,29,1,1540.0,0,4,25,86.0
+22C,Stagecoach Yorkshire,8,1,4199.0,8,0,0,529.0
+304,Team Pennine,16,1,845.0,0,2,14,69.5
+184,Bee Network,102,5,50438.0,60,2,40,381.5
+543,First Halifax,26,4,-298.0,0,8,18,-38.0
+K6,The Keighley Bus Company,31,2,4989.0,2,0,29,137.0
+635,TLC Travel,23,2,9507.0,7,0,16,139.0
+X52,Connexions Buses,23,3,6930.0,13,0,10,307.0
+111,Arriva Yorkshire,8,3,494.0,1,0,7,22.0
+509,First Halifax,17,2,13678.0,12,0,5,1208.0
+307,"First Halifax, Calder Valley & Huddersfield",2,1,415.0,0,0,2,207.5
+679,TLC Travel,2,1,-30.0,0,0,2,-15.0
+WF1,Arriva Yorkshire,4,1,-258.0,0,2,2,-63.5
+112A,East Yorkshire,1,1,73.0,0,0,1,73.0
+354,First South Yorkshire,1,1,139.0,0,0,1,139.0
