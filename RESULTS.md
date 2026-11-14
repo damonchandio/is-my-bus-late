@@ -1,74 +1,74 @@
 # Is my bus late? West Yorkshire
 
-178 hourly samples between 2026-10-28 and 2026-11-14, 3,265,633 measurements at stops, 166,966 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+179 hourly samples between 2026-10-28 and 2026-11-14, 3,292,285 measurements at stops, 168,334 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
 | Route | Operator | Typical minutes late | Over 5 min late | Early | On time | Trips |
 |---|---|---|---|---|---|---|
-| 580 | Kirkby Lonsdale Coaches | 21.8 | 65.5% | 0.0% | 34.5% | 84 |
-| 395 | Stotts Coaches | 13.6 | 56.5% | 3.8% | 39.7% | 56 |
+| 580 | Kirkby Lonsdale Coaches | 21.7 | 65.0% | 0.0% | 35.0% | 86 |
+| 395 | Stotts Coaches | 13.5 | 57.0% | 3.7% | 39.3% | 57 |
 | 412 | Connexions Buses | 12.0 | 66.5% | 0.0% | 33.5% | 60 |
-| 508 | First Halifax | 10.6 | 65.9% | 3.0% | 31.1% | 548 |
-| 635 | TLC Travel | 10.6 | 63.0% | 6.6% | 30.4% | 127 |
-| X17 | Stagecoach Yorkshire | 10.2 | 63.5% | 4.4% | 32.1% | 235 |
-| 72 | The Keighley Bus Company | 10.0 | 39.4% | 6.7% | 53.9% | 83 |
+| 508 | First Halifax | 10.7 | 66.0% | 2.9% | 31.0% | 552 |
+| 635 | TLC Travel | 10.5 | 62.9% | 6.8% | 30.3% | 128 |
+| X17 | Stagecoach Yorkshire | 10.2 | 63.8% | 4.4% | 31.8% | 237 |
+| 72 | The Keighley Bus Company | 9.8 | 38.9% | 6.6% | 54.5% | 84 |
 | 389 | Stotts Coaches | 9.6 | 73.9% | 1.3% | 24.8% | 30 |
-| 205 | A Lyles and Son | 9.0 | 46.1% | 14.5% | 39.4% | 166 |
-| 961 | Connexions Buses | 8.8 | 73.0% | 0.1% | 26.8% | 45 |
+| 205 | A Lyles and Son | 9.3 | 47.0% | 14.3% | 38.7% | 168 |
+| 961 | Connexions Buses | 8.8 | 73.2% | 0.1% | 26.7% | 46 |
 | 478 | Globe Holidays | 8.7 | 74.6% | 10.3% | 15.1% | 41 |
 | 615 | East Yorkshire | 8.3 | 54.0% | 5.8% | 40.2% | 295 |
-| 280 | Stagecoach Cumbria and North Lancashire | 7.8 | 58.4% | 4.6% | 37.0% | 76 |
-| 614 | First Bradford | 7.5 | 45.7% | 8.4% | 45.9% | 219 |
-| 361 | First South Yorkshire | 7.4 | 51.9% | 0.5% | 47.6% | 112 |
+| 280 | Stagecoach Cumbria and North Lancashire | 7.9 | 59.8% | 4.5% | 35.7% | 79 |
+| 361 | First South Yorkshire | 7.5 | 52.4% | 0.5% | 47.1% | 114 |
+| 614 | First Bradford | 7.4 | 45.2% | 8.4% | 46.3% | 220 |
 
 ## The 10 most punctual routes
 
 | Route | Operator | Typical minutes late | Over 5 min late | Early | On time | Trips |
 |---|---|---|---|---|---|---|
 | PR2 | First Leeds | -1.0 | 5.9% | 49.7% | 44.4% | 391 |
-| PR1 | First Leeds | -0.7 | 7.1% | 48.0% | 44.9% | 474 |
-| 208 | Stagecoach Yorkshire | -0.7 | 19.6% | 48.0% | 32.4% | 47 |
-| 42 | First Leeds | 0.2 | 8.2% | 30.4% | 61.5% | 1645 |
-| DTB | Station Coaches | 0.2 | 12.8% | 34.3% | 52.9% | 99 |
-| 543 | First Halifax | 0.3 | 6.8% | 31.6% | 61.6% | 449 |
+| PR1 | First Leeds | -0.7 | 7.1% | 48.0% | 44.9% | 478 |
+| 208 | Stagecoach Yorkshire | -0.5 | 21.3% | 47.0% | 31.7% | 48 |
+| DTB | Station Coaches | 0.1 | 12.6% | 34.5% | 52.9% | 102 |
+| 42 | First Leeds | 0.2 | 8.1% | 30.3% | 61.5% | 1657 |
+| 444 | Arriva Yorkshire | 0.3 | 8.6% | 29.8% | 61.6% | 732 |
+| 543 | First Halifax | 0.3 | 6.8% | 31.5% | 61.7% | 451 |
 | T2 | TLC Travel | 0.3 | 8.5% | 19.6% | 71.9% | 79 |
-| 444 | Arriva Yorkshire | 0.3 | 8.4% | 30.0% | 61.6% | 726 |
 | 177 | Globe Coaches | 0.4 | 4.8% | 25.9% | 69.3% | 109 |
-| 64 | First Leeds | 0.5 | 3.3% | 27.0% | 69.7% | 121 |
+| 101 | Globe Coaches | 0.5 | 9.2% | 29.5% | 61.3% | 99 |
 
 ## By operator
 
 | Operator | On time | Over 5 min late | Trips |
 |---|---|---|---|
 | SMT Bus and Coach Ltd | 25.7% | 59.2% | 46 |
-| Kirkby Lonsdale Coaches | 34.5% | 65.5% | 84 |
-| A Lyles and Son | 36.8% | 43.2% | 184 |
-| Stagecoach Cumbria and North Lancashire | 37.0% | 58.4% | 76 |
-| Coastliner | 50.4% | 42.8% | 464 |
-| Squarepeg | 50.8% | 36.8% | 655 |
+| Kirkby Lonsdale Coaches | 35.0% | 65.0% | 86 |
+| Stagecoach Cumbria and North Lancashire | 35.7% | 59.8% | 79 |
+| A Lyles and Son | 36.3% | 44.0% | 186 |
+| Squarepeg | 50.7% | 36.9% | 660 |
+| Coastliner | 50.8% | 42.5% | 473 |
 | Stringers | 50.9% | 17.5% | 31 |
-| Bee Network | 51.9% | 40.9% | 541 |
-| Globe Coaches | 54.0% | 27.9% | 1480 |
-| Globe Holidays | 54.1% | 25.0% | 551 |
-| Stagecoach Yorkshire | 54.4% | 30.4% | 8338 |
-| TLC Travel | 55.6% | 32.7% | 4821 |
-| Connexions Buses | 56.4% | 30.1% | 1937 |
-| Arriva Yorkshire | 56.8% | 23.7% | 38431 |
-| First South Yorkshire | 57.5% | 39.9% | 747 |
-| Station Coaches | 58.4% | 16.2% | 162 |
-| First Halifax | 60.9% | 29.3% | 10853 |
-| East Yorkshire | 61.3% | 26.3% | 4135 |
-| Stotts Coaches | 61.6% | 27.5% | 815 |
-| First Leeds | 61.6% | 21.3% | 42141 |
-| First Bradford | 62.3% | 22.0% | 17190 |
-| The Burnley Bus Company | 63.8% | 24.6% | 1308 |
-| The Harrogate Bus Company | 66.3% | 23.7% | 2374 |
-| Team Pennine | 68.0% | 22.0% | 7550 |
-| The Keighley Bus Company | 69.0% | 22.2% | 10195 |
-| York Pullman | 70.5% | 13.2% | 63 |
-| First Halifax, Calder Valley & Huddersfield | 72.2% | 17.9% | 11776 |
-| Flyer | 73.2% | 14.9% | 2048 |
+| Bee Network | 52.0% | 40.9% | 545 |
+| Globe Coaches | 53.9% | 28.0% | 1496 |
+| Globe Holidays | 53.9% | 24.9% | 557 |
+| Stagecoach Yorkshire | 54.4% | 30.4% | 8348 |
+| TLC Travel | 55.5% | 32.8% | 4861 |
+| Connexions Buses | 56.4% | 30.1% | 1954 |
+| Arriva Yorkshire | 56.7% | 23.8% | 38768 |
+| First South Yorkshire | 57.4% | 40.1% | 758 |
+| Station Coaches | 58.3% | 16.1% | 165 |
+| First Halifax | 60.8% | 29.4% | 10945 |
+| East Yorkshire | 61.3% | 26.2% | 4167 |
+| First Leeds | 61.5% | 21.3% | 42450 |
+| Stotts Coaches | 61.7% | 27.6% | 830 |
+| First Bradford | 62.3% | 22.1% | 17336 |
+| The Burnley Bus Company | 63.4% | 25.1% | 1320 |
+| The Harrogate Bus Company | 66.2% | 23.9% | 2397 |
+| York Pullman | 66.9% | 12.5% | 64 |
+| Team Pennine | 67.9% | 22.1% | 7620 |
+| The Keighley Bus Company | 68.9% | 22.3% | 10283 |
+| First Halifax, Calder Valley & Huddersfield | 72.2% | 17.9% | 11878 |
+| Flyer | 73.2% | 15.0% | 2062 |
 | 21 Transport | 87.2% | 6.6% | 63 |
 
 Typical minutes late = observation-weighted average of each hourly sample's median delay. Routes need 30 measured trips to appear. Source: DfT Bus Open Data Service (OGL v3.0).
