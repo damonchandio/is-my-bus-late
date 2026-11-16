@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-199 hourly samples between 2026-10-28 and 2026-11-16, 3,544,433 measurements at stops, 181,362 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+200 hourly samples between 2026-10-28 and 2026-11-16, 3,544,433 measurements at stops, 181,362 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -34,8 +34,8 @@
 | 42 | First Leeds | 0.2 | 8.1% | 29.8% | 62.1% | 1825 |
 | 444 | Arriva Yorkshire | 0.3 | 8.7% | 29.5% | 61.8% | 795 |
 | 543 | First Halifax | 0.3 | 6.9% | 31.6% | 61.5% | 494 |
-| T2 | TLC Travel | 0.4 | 8.3% | 18.9% | 72.8% | 88 |
 | 64 | First Leeds | 0.4 | 2.7% | 26.5% | 70.7% | 148 |
+| T2 | TLC Travel | 0.4 | 8.3% | 18.9% | 72.8% | 88 |
 
 ## By operator
 
