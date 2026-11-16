@@ -1,0 +1,25 @@
+route,operator,n,trips,delay_sum,n_over5,n_early,n_ontime,run_median
+592,First Halifax,26,1,620.0,0,0,26,32.0
+425,Arriva Yorkshire,3,1,-613.0,0,3,0,-208.0
+201,Arriva Yorkshire,22,1,-2408.0,0,15,7,-85.0
+50A,First Leeds,26,2,-1670.0,0,14,12,-77.5
+645,First Bradford,19,1,-5188.0,1,16,2,-328.0
+3,First Leeds,4,1,200.0,0,0,4,35.5
+34,First Leeds,42,2,544.0,0,3,39,-11.5
+383,"First Halifax, Calder Valley & Huddersfield",5,1,12278.0,5,0,0,2371.0
+323,"First Halifax, Calder Valley & Huddersfield",16,1,-550.0,0,6,10,-25.0
+X99,East Yorkshire,9,1,-825.0,0,5,4,-74.0
+496,Arriva Yorkshire,10,1,-1867.0,0,9,1,-200.0
+501,First Halifax,1,1,440.0,1,0,0,440.0
+7,The Harrogate Bus Company,6,1,1105.0,1,0,5,160.0
+12,First Leeds,38,1,-4883.0,0,24,14,-102.5
+195A,Arriva Yorkshire,6,1,14396.0,6,0,0,2399.5
+19,First Leeds,1,1,-106.0,0,1,0,-106.0
+617,First Bradford,7,1,-307.0,0,2,5,-20.0
+2,First Leeds,22,1,2174.0,0,1,21,120.0
+24,First Leeds,19,1,13821.0,9,0,10,282.0
+72,First Bradford,42,3,-1707.0,0,20,22,-41.0
+618,First Bradford,6,1,-1058.0,0,6,0,-173.5
+576,First Halifax,5,1,-381.0,0,3,2,-83.0
+110,Arriva Yorkshire,15,1,-2074.0,0,10,5,-109.0
+38,First Leeds,10,1,-757.0,0,8,2,-79.5
