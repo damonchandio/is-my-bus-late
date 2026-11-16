@@ -1,0 +1,46 @@
+route,operator,n,trips,delay_sum,n_over5,n_early,n_ontime,run_median
+59,Stagecoach Yorkshire,17,1,-836.0,0,5,12,-53.0
+579,First Halifax,6,1,590.0,0,0,6,105.0
+42,First Leeds,8,1,-61.0,0,1,7,8.0
+4,First Leeds,8,1,581.0,0,0,8,63.0
+72,First Bradford,20,1,528.0,0,1,19,23.0
+618,First Bradford,1,1,13.0,0,0,1,13.0
+549,"First Halifax, Calder Valley & Huddersfield",11,2,1441.0,3,2,6,7.0
+576,First Halifax,5,1,213.0,0,2,3,70.0
+140,Arriva Yorkshire,7,1,-173.0,0,1,6,-1.0
+110,Arriva Yorkshire,21,1,-1355.0,0,12,9,-67.0
+254,Arriva Yorkshire,16,1,-1954.0,0,10,6,-93.0
+23,First Leeds,1,1,12.0,0,0,1,12.0
+67C,Stagecoach Yorkshire,8,1,568.0,0,0,8,69.0
+496,Arriva Yorkshire,10,2,49.0,0,0,10,8.0
+149,Arriva Yorkshire,2,1,19.0,0,0,2,9.5
+202,Arriva Yorkshire,12,2,-290.0,0,3,9,-23.0
+229,Arriva Yorkshire,17,2,2301.0,0,0,17,134.0
+501,First Halifax,16,1,974.0,1,0,15,23.5
+16,First Leeds,4,1,169.0,0,0,4,43.5
+49,First Leeds,9,1,-580.0,0,4,5,-54.0
+328,"First Halifax, Calder Valley & Huddersfield",11,1,2425.0,2,0,9,201.0
+12,First Leeds,41,3,-68.0,0,2,39,10.0
+231,Arriva Yorkshire,1,1,72.0,0,0,1,72.0
+106,Arriva Yorkshire,2,1,-24.0,0,0,2,-12.0
+28,First Leeds,5,2,107.0,0,0,5,19.0
+425,Arriva Yorkshire,11,1,-1398.0,0,10,1,-121.0
+168,Arriva Yorkshire,23,1,-221.0,0,4,19,-5.0
+446,Arriva Yorkshire,2,1,109.0,0,0,2,54.5
+640,First Bradford,4,1,7.0,0,0,4,11.5
+645,First Bradford,26,1,-1236.0,0,3,23,33.0
+164,Arriva Yorkshire,5,1,-2.0,0,1,4,1.0
+34,First Leeds,18,1,1723.0,0,0,18,81.0
+4F,First Leeds,5,1,348.0,0,0,5,67.0
+165,Arriva Yorkshire,9,1,-124.0,0,1,8,9.0
+X1,First Halifax,22,2,-91.0,0,3,19,6.0
+383,"First Halifax, Calder Valley & Huddersfield",25,1,-1780.0,0,13,12,-63.0
+X99,East Yorkshire,4,1,-78.0,0,0,4,-16.5
+226,Stagecoach Yorkshire,2,1,-100.0,0,0,2,-50.0
+163,Arriva Yorkshire,27,3,985.0,0,3,24,20.0
+9A,First Leeds,24,1,1100.0,0,2,22,19.0
+16A,First Leeds,3,1,298.0,0,0,3,88.0
+682,First Bradford,13,1,-635.0,0,4,9,-49.0
+324,"First Halifax, Calder Valley & Huddersfield",8,1,1010.0,0,0,8,140.5
+372,"First Halifax, Calder Valley & Huddersfield",10,1,-1590.0,0,1,9,-45.0
+24,First Leeds,7,1,472.0,0,0,7,52.0
