@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-223 hourly samples between 2026-10-28 and 2026-11-17, 4,023,293 measurements at stops, 205,967 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+224 hourly samples between 2026-10-28 and 2026-11-17, 4,023,293 measurements at stops, 205,967 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -10,8 +10,8 @@
 | 395 | Stotts Coaches | 12.4 | 54.3% | 3.9% | 41.9% | 71 |
 | 412 | Connexions Buses | 11.6 | 68.0% | 0.4% | 31.6% | 73 |
 | 635 | TLC Travel | 10.3 | 61.5% | 6.4% | 32.2% | 153 |
-| 205 | A Lyles and Son | 9.9 | 50.5% | 14.1% | 35.4% | 205 |
 | X17 | Stagecoach Yorkshire | 9.9 | 62.2% | 4.7% | 33.1% | 289 |
+| 205 | A Lyles and Son | 9.9 | 50.5% | 14.1% | 35.4% | 205 |
 | 508 | First Halifax | 9.4 | 59.2% | 3.9% | 36.8% | 669 |
 | 389 | Stotts Coaches | 9.1 | 69.8% | 2.0% | 28.2% | 36 |
 | 961 | Connexions Buses | 8.7 | 73.4% | 0.2% | 26.3% | 56 |
@@ -27,8 +27,8 @@
 | Route | Operator | Typical minutes late | Over 5 min late | Early | On time | Trips |
 |---|---|---|---|---|---|---|
 | 37 | York Pullman | -0.9 | 11.3% | 29.9% | 58.8% | 36 |
-| PR1 | First Leeds | -0.8 | 6.4% | 49.0% | 44.6% | 572 |
 | PR2 | First Leeds | -0.8 | 6.3% | 48.0% | 45.7% | 465 |
+| PR1 | First Leeds | -0.8 | 6.4% | 49.0% | 44.6% | 572 |
 | 208 | Stagecoach Yorkshire | -0.7 | 19.9% | 48.4% | 31.7% | 63 |
 | DTB | Station Coaches | -0.2 | 10.9% | 39.3% | 49.8% | 124 |
 | 100 | Globe Coaches | 0.0 | 8.1% | 39.5% | 52.3% | 32 |
@@ -60,8 +60,8 @@
 | Station Coaches | 58.2% | 14.9% | 201 |
 | First Leeds | 62.3% | 20.3% | 51671 |
 | First Halifax | 62.4% | 27.4% | 13421 |
-| Stotts Coaches | 62.6% | 26.6% | 1003 |
 | East Yorkshire | 62.6% | 24.7% | 5059 |
+| Stotts Coaches | 62.6% | 26.6% | 1003 |
 | The Burnley Bus Company | 62.7% | 26.5% | 1611 |
 | First Bradford | 63.4% | 21.0% | 21181 |
 | The Harrogate Bus Company | 67.1% | 23.0% | 2904 |
