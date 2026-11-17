@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-224 hourly samples between 2026-10-28 and 2026-11-17, 4,023,293 measurements at stops, 205,967 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+225 hourly samples between 2026-10-28 and 2026-11-17, 4,023,293 measurements at stops, 205,967 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -60,8 +60,8 @@
 | Station Coaches | 58.2% | 14.9% | 201 |
 | First Leeds | 62.3% | 20.3% | 51671 |
 | First Halifax | 62.4% | 27.4% | 13421 |
-| East Yorkshire | 62.6% | 24.7% | 5059 |
 | Stotts Coaches | 62.6% | 26.6% | 1003 |
+| East Yorkshire | 62.6% | 24.7% | 5059 |
 | The Burnley Bus Company | 62.7% | 26.5% | 1611 |
 | First Bradford | 63.4% | 21.0% | 21181 |
 | The Harrogate Bus Company | 67.1% | 23.0% | 2904 |
