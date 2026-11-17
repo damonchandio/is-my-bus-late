@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-222 hourly samples between 2026-10-28 and 2026-11-17, 4,023,293 measurements at stops, 205,967 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+223 hourly samples between 2026-10-28 and 2026-11-17, 4,023,293 measurements at stops, 205,967 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -27,8 +27,8 @@
 | Route | Operator | Typical minutes late | Over 5 min late | Early | On time | Trips |
 |---|---|---|---|---|---|---|
 | 37 | York Pullman | -0.9 | 11.3% | 29.9% | 58.8% | 36 |
-| PR2 | First Leeds | -0.8 | 6.3% | 48.0% | 45.7% | 465 |
 | PR1 | First Leeds | -0.8 | 6.4% | 49.0% | 44.6% | 572 |
+| PR2 | First Leeds | -0.8 | 6.3% | 48.0% | 45.7% | 465 |
 | 208 | Stagecoach Yorkshire | -0.7 | 19.9% | 48.4% | 31.7% | 63 |
 | DTB | Station Coaches | -0.2 | 10.9% | 39.3% | 49.8% | 124 |
 | 100 | Globe Coaches | 0.0 | 8.1% | 39.5% | 52.3% | 32 |
