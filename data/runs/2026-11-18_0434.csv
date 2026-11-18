@@ -1,0 +1,9 @@
+route,operator,n,trips,delay_sum,n_over5,n_early,n_ontime,run_median
+72,First Bradford,16,1,7595.0,16,0,0,466.0
+110,Arriva Yorkshire,3,1,258.0,0,0,3,98.0
+168,Arriva Yorkshire,3,1,34.0,0,0,3,15.0
+645,First Bradford,2,1,21.0,0,0,2,10.5
+383,"First Halifax, Calder Valley & Huddersfield",6,1,-666.0,0,5,1,-107.5
+501,First Halifax,17,1,181.0,0,0,17,22.0
+363,"First Halifax, Calder Valley & Huddersfield",13,1,1746.0,0,0,13,151.0
+163,Arriva Yorkshire,4,1,108.0,0,0,4,28.5
