@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-301 hourly samples between 2026-10-28 and 2026-11-22, 5,475,976 measurements at stops, 282,000 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+302 hourly samples between 2026-10-28 and 2026-11-22, 5,476,034 measurements at stops, 282,011 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -26,14 +26,14 @@
 
 | Route | Operator | Typical minutes late | Over 5 min late | Early | On time | Trips |
 |---|---|---|---|---|---|---|
-| PR1 | First Leeds | -0.7 | 6.6% | 48.6% | 44.7% | 814 |
 | PR2 | First Leeds | -0.7 | 6.4% | 47.2% | 46.4% | 667 |
+| PR1 | First Leeds | -0.7 | 6.6% | 48.6% | 44.7% | 814 |
 | 37 | York Pullman | -0.6 | 10.5% | 27.0% | 62.5% | 49 |
 | 208 | Stagecoach Yorkshire | -0.4 | 21.2% | 48.4% | 30.3% | 84 |
-| 97A | Globe Holidays | 0.1 | 6.5% | 36.0% | 57.5% | 30 |
 | DTB | Station Coaches | 0.1 | 12.1% | 38.0% | 49.9% | 171 |
-| 42 | First Leeds | 0.2 | 8.0% | 30.2% | 61.8% | 2719 |
+| 97A | Globe Holidays | 0.1 | 6.5% | 36.0% | 57.5% | 30 |
 | 409 | Arriva Yorkshire | 0.2 | 0.9% | 16.0% | 83.1% | 41 |
+| 42 | First Leeds | 0.2 | 8.0% | 30.2% | 61.8% | 2719 |
 | 80 | Squarepeg | 0.3 | 4.3% | 28.8% | 66.9% | 46 |
 | 444 | Arriva Yorkshire | 0.3 | 8.2% | 29.6% | 62.2% | 1223 |
 
@@ -54,17 +54,17 @@
 | Globe Coaches | 54.6% | 27.0% | 2537 |
 | TLC Travel | 55.9% | 32.8% | 8044 |
 | First South Yorkshire | 56.6% | 40.3% | 1205 |
-| Stagecoach Yorkshire | 57.0% | 26.8% | 16080 |
-| Arriva Yorkshire | 57.3% | 22.9% | 64058 |
+| Stagecoach Yorkshire | 57.0% | 26.8% | 16082 |
+| Arriva Yorkshire | 57.3% | 22.9% | 64061 |
 | Station Coaches | 58.7% | 13.5% | 280 |
 | Connexions Buses | 58.8% | 28.1% | 3288 |
 | The Burnley Bus Company | 60.5% | 29.1% | 2187 |
 | Stringers | 60.7% | 14.3% | 66 |
 | Stotts Coaches | 61.9% | 27.0% | 1393 |
-| First Leeds | 62.1% | 20.6% | 69318 |
+| First Leeds | 62.1% | 20.6% | 69320 |
 | East Yorkshire | 62.5% | 24.6% | 6930 |
 | First Halifax | 62.7% | 26.9% | 18070 |
-| First Bradford | 63.5% | 20.7% | 28605 |
+| First Bradford | 63.5% | 20.7% | 28609 |
 | The Harrogate Bus Company | 66.8% | 23.2% | 3888 |
 | Team Pennine | 68.1% | 22.1% | 12589 |
 | The Keighley Bus Company | 68.5% | 22.5% | 16955 |
