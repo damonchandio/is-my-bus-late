@@ -1,0 +1,41 @@
+route,operator,n,trips,delay_sum,n_over5,n_early,n_ontime,run_median
+2A,Stagecoach Yorkshire,9,2,4682.0,8,0,1,554.0
+501,First Halifax,66,2,4531.0,4,4,58,56.0
+16,First Leeds,46,2,2742.0,0,4,42,71.5
+49,First Leeds,21,2,6194.0,13,0,8,307.0
+12,First Leeds,3,1,708.0,1,0,2,224.0
+7,First Leeds,4,1,-62.0,0,1,3,13.0
+363,"First Halifax, Calder Valley & Huddersfield",41,3,581.0,0,7,34,-2.0
+A1,Flyer,9,1,862.0,0,0,9,85.0
+28,Stagecoach Yorkshire,19,1,6247.0,13,0,6,310.0
+27,Stagecoach Yorkshire,21,3,1326.0,1,1,19,62.0
+24,First Leeds,43,3,7396.0,13,0,30,123.0
+22X,Stagecoach Yorkshire,16,1,2432.0,0,0,16,148.0
+27A,Stagecoach Yorkshire,25,1,1144.0,0,1,24,21.0
+19,First Leeds,6,1,-356.0,0,1,5,13.0
+56,First Leeds,123,4,9353.0,8,17,98,21.0
+16A,First Leeds,100,3,4357.0,0,12,88,63.0
+X84,First Leeds,27,1,4612.0,0,0,27,136.0
+2,First Leeds,71,4,9244.0,12,5,54,104.0
+A2,Flyer,52,2,7690.0,8,1,43,115.0
+208,Stagecoach Yorkshire,12,1,1186.0,1,0,11,60.5
+617,First Bradford,27,1,-1727.0,0,6,21,-44.0
+23,First Leeds,28,2,6439.0,9,0,19,241.5
+74,First Leeds,38,1,-1646.0,0,12,26,-46.5
+42,First Leeds,36,2,-488.0,0,3,33,-7.5
+4,First Leeds,33,1,9182.0,17,0,16,313.0
+3A,First Leeds,22,1,1484.0,0,4,18,66.0
+72,First Bradford,122,8,26991.0,40,7,75,189.0
+13,First Leeds,53,2,7693.0,9,1,43,104.0
+576,First Halifax,15,1,-2340.0,0,11,4,-233.0
+A3,Flyer,37,3,4680.0,0,0,37,105.0
+383,"First Halifax, Calder Valley & Huddersfield",31,2,16426.0,26,0,5,603.0
+50,First Leeds,28,1,3143.0,1,1,26,109.5
+3,First Leeds,28,1,6706.0,3,0,25,237.0
+34,First Leeds,35,2,176.0,0,1,34,9.0
+52,First Leeds,43,3,3200.0,0,2,41,76.0
+13A,First Leeds,51,2,4316.0,0,0,51,78.0
+4F,First Leeds,24,1,-3465.0,2,16,6,-103.5
+640,First Bradford,4,1,231.0,0,0,4,67.0
+645,First Bradford,13,1,-2630.0,0,5,8,-51.0
+X1,First Halifax,29,3,-1056.0,0,9,20,-45.0
