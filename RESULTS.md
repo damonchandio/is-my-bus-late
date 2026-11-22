@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-320 hourly samples between 2026-10-28 and 2026-11-22, 5,659,881 measurements at stops, 291,825 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+321 hourly samples between 2026-10-28 and 2026-11-22, 5,667,689 measurements at stops, 292,229 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -12,13 +12,13 @@
 | 635 | TLC Travel | 10.8 | 63.6% | 5.7% | 30.7% | 214 |
 | 395 | Stotts Coaches | 10.8 | 52.0% | 4.2% | 43.8% | 95 |
 | X17 | Stagecoach Yorkshire | 9.5 | 60.1% | 4.6% | 35.3% | 416 |
-| 508 | First Halifax | 9.3 | 58.9% | 3.6% | 37.4% | 937 |
+| 508 | First Halifax | 9.3 | 58.9% | 3.7% | 37.5% | 938 |
 | WA1 | Arriva Yorkshire | 9.1 | 61.3% | 18.8% | 20.0% | 31 |
 | K85 | Team Pennine | 9.0 | 72.0% | 0.0% | 28.0% | 34 |
 | 478 | Globe Holidays | 8.9 | 71.6% | 11.2% | 17.3% | 68 |
 | 72 | The Keighley Bus Company | 8.8 | 40.4% | 6.8% | 52.8% | 145 |
 | 902 | TLC Travel | 8.7 | 68.0% | 1.4% | 30.6% | 46 |
-| 615 | East Yorkshire | 8.4 | 54.2% | 5.1% | 40.7% | 563 |
+| 615 | East Yorkshire | 8.4 | 54.0% | 5.1% | 40.9% | 567 |
 | 389 | Stotts Coaches | 8.4 | 64.2% | 2.0% | 33.8% | 49 |
 | 64 | The Keighley Bus Company | 8.4 | 42.0% | 3.8% | 54.2% | 333 |
 
@@ -30,18 +30,18 @@
 | PR1 | First Leeds | -0.7 | 6.6% | 48.6% | 44.7% | 814 |
 | 37 | York Pullman | -0.6 | 10.5% | 27.0% | 62.5% | 49 |
 | 208 | Stagecoach Yorkshire | -0.5 | 20.2% | 48.7% | 31.1% | 89 |
-| 97A | Globe Holidays | 0.1 | 6.5% | 36.0% | 57.5% | 30 |
 | DTB | Station Coaches | 0.1 | 12.1% | 38.0% | 49.9% | 171 |
+| 97A | Globe Holidays | 0.1 | 6.5% | 36.0% | 57.5% | 30 |
+| 42 | First Leeds | 0.2 | 7.8% | 30.1% | 62.0% | 2874 |
 | 409 | Arriva Yorkshire | 0.2 | 0.9% | 16.0% | 83.1% | 41 |
-| 42 | First Leeds | 0.2 | 7.9% | 30.1% | 62.0% | 2868 |
+| 444 | Arriva Yorkshire | 0.3 | 8.2% | 29.5% | 62.3% | 1269 |
 | 80 | Squarepeg | 0.3 | 4.3% | 28.8% | 66.9% | 46 |
-| 444 | Arriva Yorkshire | 0.3 | 8.2% | 29.4% | 62.3% | 1267 |
 
 ## By operator
 
 | Operator | On time | Over 5 min late | Trips |
 |---|---|---|---|
-| SMT Bus and Coach Ltd | 28.5% | 61.6% | 95 |
+| SMT Bus and Coach Ltd | 28.6% | 61.5% | 96 |
 | Kirkby Lonsdale Coaches | 30.5% | 69.5% | 141 |
 | A Lyles and Son | 37.5% | 42.3% | 344 |
 | Wilfreda Beehive | 42.2% | 23.9% | 35 |
@@ -52,25 +52,25 @@
 | Globe Holidays | 52.8% | 25.0% | 1089 |
 | Coastliner | 53.4% | 39.5% | 1082 |
 | Globe Coaches | 55.0% | 26.7% | 2600 |
-| TLC Travel | 56.3% | 32.5% | 8313 |
-| First South Yorkshire | 57.0% | 40.0% | 1227 |
-| Stagecoach Yorkshire | 57.3% | 26.5% | 16768 |
-| Arriva Yorkshire | 57.5% | 22.5% | 65888 |
+| TLC Travel | 56.3% | 32.5% | 8322 |
+| First South Yorkshire | 57.0% | 40.0% | 1229 |
+| Stagecoach Yorkshire | 57.3% | 26.4% | 16798 |
+| Arriva Yorkshire | 57.5% | 22.5% | 65965 |
 | Station Coaches | 58.7% | 13.5% | 280 |
 | Connexions Buses | 58.8% | 28.1% | 3288 |
 | Stringers | 60.7% | 14.3% | 66 |
-| The Burnley Bus Company | 60.8% | 28.9% | 2258 |
+| The Burnley Bus Company | 60.8% | 28.9% | 2259 |
 | Stotts Coaches | 61.9% | 27.0% | 1393 |
-| First Leeds | 62.3% | 20.3% | 72203 |
-| East Yorkshire | 62.5% | 24.7% | 7094 |
-| First Halifax | 62.9% | 26.7% | 18829 |
-| First Bradford | 63.8% | 20.4% | 29671 |
-| The Harrogate Bus Company | 67.0% | 23.1% | 4031 |
-| Team Pennine | 67.9% | 22.3% | 12967 |
-| The Keighley Bus Company | 68.7% | 22.4% | 17480 |
-| Flyer | 70.9% | 17.7% | 3579 |
+| First Leeds | 62.3% | 20.3% | 72333 |
+| East Yorkshire | 62.5% | 24.7% | 7102 |
+| First Halifax | 62.9% | 26.6% | 18852 |
+| First Bradford | 63.8% | 20.3% | 29714 |
+| The Harrogate Bus Company | 67.0% | 23.1% | 4038 |
+| Team Pennine | 67.9% | 22.3% | 12974 |
+| The Keighley Bus Company | 68.7% | 22.3% | 17504 |
+| Flyer | 70.9% | 17.7% | 3589 |
 | York Pullman | 72.1% | 8.4% | 123 |
-| First Halifax, Calder Valley & Huddersfield | 72.3% | 17.6% | 20288 |
+| First Halifax, Calder Valley & Huddersfield | 72.3% | 17.6% | 20321 |
 | 21 Transport | 83.7% | 9.8% | 103 |
 
 Typical minutes late = observation-weighted average of each hourly sample's median delay. Routes need 30 measured trips to appear. Source: DfT Bus Open Data Service (OGL v3.0).
