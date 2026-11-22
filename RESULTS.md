@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-297 hourly samples between 2026-10-28 and 2026-11-21, 5,475,941 measurements at stops, 281,998 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+298 hourly samples between 2026-10-28 and 2026-11-22, 5,475,941 measurements at stops, 281,998 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -26,12 +26,12 @@
 
 | Route | Operator | Typical minutes late | Over 5 min late | Early | On time | Trips |
 |---|---|---|---|---|---|---|
-| PR2 | First Leeds | -0.7 | 6.4% | 47.2% | 46.4% | 667 |
 | PR1 | First Leeds | -0.7 | 6.6% | 48.6% | 44.7% | 814 |
+| PR2 | First Leeds | -0.7 | 6.4% | 47.2% | 46.4% | 667 |
 | 37 | York Pullman | -0.6 | 10.5% | 27.0% | 62.5% | 49 |
 | 208 | Stagecoach Yorkshire | -0.4 | 21.2% | 48.4% | 30.3% | 84 |
-| DTB | Station Coaches | 0.1 | 12.1% | 38.0% | 49.9% | 171 |
 | 97A | Globe Holidays | 0.1 | 6.5% | 36.0% | 57.5% | 30 |
+| DTB | Station Coaches | 0.1 | 12.1% | 38.0% | 49.9% | 171 |
 | 42 | First Leeds | 0.2 | 8.0% | 30.2% | 61.8% | 2719 |
 | 409 | Arriva Yorkshire | 0.2 | 0.9% | 16.0% | 83.1% | 41 |
 | 80 | Squarepeg | 0.3 | 4.3% | 28.8% | 66.9% | 46 |
@@ -69,8 +69,8 @@
 | Team Pennine | 68.1% | 22.1% | 12589 |
 | The Keighley Bus Company | 68.5% | 22.5% | 16955 |
 | Flyer | 70.7% | 17.8% | 3360 |
-| York Pullman | 72.1% | 9.9% | 114 |
 | First Halifax, Calder Valley & Huddersfield | 72.1% | 17.8% | 19634 |
+| York Pullman | 72.1% | 9.9% | 114 |
 | 21 Transport | 83.7% | 9.8% | 103 |
 
 Typical minutes late = observation-weighted average of each hourly sample's median delay. Routes need 30 measured trips to appear. Source: DfT Bus Open Data Service (OGL v3.0).
