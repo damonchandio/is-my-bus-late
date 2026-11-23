@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-322 hourly samples between 2026-10-28 and 2026-11-23, 5,667,689 measurements at stops, 292,229 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+323 hourly samples between 2026-10-28 and 2026-11-23, 5,667,689 measurements at stops, 292,229 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -19,8 +19,8 @@
 | 72 | The Keighley Bus Company | 8.8 | 40.4% | 6.8% | 52.8% | 145 |
 | 902 | TLC Travel | 8.7 | 68.0% | 1.4% | 30.6% | 46 |
 | 389 | Stotts Coaches | 8.4 | 64.2% | 2.0% | 33.8% | 49 |
-| 64 | The Keighley Bus Company | 8.4 | 42.0% | 3.8% | 54.2% | 333 |
 | 615 | East Yorkshire | 8.4 | 54.0% | 5.1% | 40.9% | 567 |
+| 64 | The Keighley Bus Company | 8.4 | 42.0% | 3.8% | 54.2% | 333 |
 
 ## The 10 most punctual routes
 
@@ -34,8 +34,8 @@
 | 97A | Globe Holidays | 0.1 | 6.5% | 36.0% | 57.5% | 30 |
 | 42 | First Leeds | 0.2 | 7.8% | 30.1% | 62.0% | 2874 |
 | 409 | Arriva Yorkshire | 0.2 | 0.9% | 16.0% | 83.1% | 41 |
-| 444 | Arriva Yorkshire | 0.3 | 8.2% | 29.5% | 62.3% | 1269 |
 | 80 | Squarepeg | 0.3 | 4.3% | 28.8% | 66.9% | 46 |
+| 444 | Arriva Yorkshire | 0.3 | 8.2% | 29.5% | 62.3% | 1269 |
 
 ## By operator
 
