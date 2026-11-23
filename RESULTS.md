@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-323 hourly samples between 2026-10-28 and 2026-11-23, 5,667,689 measurements at stops, 292,229 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+324 hourly samples between 2026-10-28 and 2026-11-23, 5,667,689 measurements at stops, 292,229 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -9,8 +9,8 @@
 | 580 | Kirkby Lonsdale Coaches | 21.6 | 69.5% | 0.0% | 30.5% | 141 |
 | 120 | The Burnley Bus Company | 20.2 | 78.0% | 6.5% | 15.5% | 40 |
 | 412 | Connexions Buses | 11.6 | 65.8% | 0.4% | 33.8% | 105 |
-| 635 | TLC Travel | 10.8 | 63.6% | 5.7% | 30.7% | 214 |
 | 395 | Stotts Coaches | 10.8 | 52.0% | 4.2% | 43.8% | 95 |
+| 635 | TLC Travel | 10.8 | 63.6% | 5.7% | 30.7% | 214 |
 | X17 | Stagecoach Yorkshire | 9.5 | 60.1% | 4.6% | 35.3% | 416 |
 | 508 | First Halifax | 9.3 | 58.9% | 3.7% | 37.5% | 938 |
 | WA1 | Arriva Yorkshire | 9.1 | 61.3% | 18.8% | 20.0% | 31 |
@@ -18,9 +18,9 @@
 | 478 | Globe Holidays | 8.9 | 71.6% | 11.2% | 17.3% | 68 |
 | 72 | The Keighley Bus Company | 8.8 | 40.4% | 6.8% | 52.8% | 145 |
 | 902 | TLC Travel | 8.7 | 68.0% | 1.4% | 30.6% | 46 |
-| 389 | Stotts Coaches | 8.4 | 64.2% | 2.0% | 33.8% | 49 |
 | 615 | East Yorkshire | 8.4 | 54.0% | 5.1% | 40.9% | 567 |
 | 64 | The Keighley Bus Company | 8.4 | 42.0% | 3.8% | 54.2% | 333 |
+| 389 | Stotts Coaches | 8.4 | 64.2% | 2.0% | 33.8% | 49 |
 
 ## The 10 most punctual routes
 
@@ -30,12 +30,12 @@
 | PR1 | First Leeds | -0.7 | 6.6% | 48.6% | 44.7% | 814 |
 | 37 | York Pullman | -0.6 | 10.5% | 27.0% | 62.5% | 49 |
 | 208 | Stagecoach Yorkshire | -0.5 | 20.2% | 48.7% | 31.1% | 89 |
-| DTB | Station Coaches | 0.1 | 12.1% | 38.0% | 49.9% | 171 |
 | 97A | Globe Holidays | 0.1 | 6.5% | 36.0% | 57.5% | 30 |
+| DTB | Station Coaches | 0.1 | 12.1% | 38.0% | 49.9% | 171 |
 | 42 | First Leeds | 0.2 | 7.8% | 30.1% | 62.0% | 2874 |
 | 409 | Arriva Yorkshire | 0.2 | 0.9% | 16.0% | 83.1% | 41 |
-| 80 | Squarepeg | 0.3 | 4.3% | 28.8% | 66.9% | 46 |
 | 444 | Arriva Yorkshire | 0.3 | 8.2% | 29.5% | 62.3% | 1269 |
+| 80 | Squarepeg | 0.3 | 4.3% | 28.8% | 66.9% | 46 |
 
 ## By operator
 
