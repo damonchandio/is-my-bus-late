@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-321 hourly samples between 2026-10-28 and 2026-11-22, 5,667,689 measurements at stops, 292,229 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+322 hourly samples between 2026-10-28 and 2026-11-23, 5,667,689 measurements at stops, 292,229 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -18,9 +18,9 @@
 | 478 | Globe Holidays | 8.9 | 71.6% | 11.2% | 17.3% | 68 |
 | 72 | The Keighley Bus Company | 8.8 | 40.4% | 6.8% | 52.8% | 145 |
 | 902 | TLC Travel | 8.7 | 68.0% | 1.4% | 30.6% | 46 |
-| 615 | East Yorkshire | 8.4 | 54.0% | 5.1% | 40.9% | 567 |
 | 389 | Stotts Coaches | 8.4 | 64.2% | 2.0% | 33.8% | 49 |
 | 64 | The Keighley Bus Company | 8.4 | 42.0% | 3.8% | 54.2% | 333 |
+| 615 | East Yorkshire | 8.4 | 54.0% | 5.1% | 40.9% | 567 |
 
 ## The 10 most punctual routes
 
