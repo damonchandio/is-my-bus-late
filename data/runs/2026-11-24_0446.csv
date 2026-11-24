@@ -1,0 +1,21 @@
+route,operator,n,trips,delay_sum,n_over5,n_early,n_ontime,run_median
+425,Arriva Yorkshire,9,1,-162.0,0,0,9,-25.0
+168,Arriva Yorkshire,13,1,121.0,0,1,12,10.0
+645,First Bradford,12,1,-736.0,0,1,11,75.5
+164,Arriva Yorkshire,7,1,690.0,0,0,7,103.0
+X1,First Halifax,3,1,304.0,0,0,3,92.0
+383,"First Halifax, Calder Valley & Huddersfield",15,1,793.0,0,0,15,50.0
+163,Arriva Yorkshire,13,1,1439.0,0,0,13,98.0
+682,First Bradford,16,1,-19122.0,0,16,0,-1189.0
+372,"First Halifax, Calder Valley & Huddersfield",2,1,160.0,0,0,2,80.0
+202,Arriva Yorkshire,2,1,282.0,0,0,2,141.0
+229,Arriva Yorkshire,5,1,355.0,0,0,5,91.0
+501,First Halifax,27,1,1377.0,0,0,27,42.0
+328,"First Halifax, Calder Valley & Huddersfield",4,1,-450.0,0,3,1,-112.5
+12,First Leeds,17,2,183.0,0,1,16,-14.0
+363,"First Halifax, Calder Valley & Huddersfield",28,1,-1989.0,0,14,14,-64.5
+59,Stagecoach Yorkshire,4,1,89.0,0,0,4,34.5
+72,First Bradford,5,1,-191.0,0,1,4,-31.0
+110,Arriva Yorkshire,12,1,-190.0,0,4,8,0.5
+254,Arriva Yorkshire,2,1,-31.0,0,0,2,-15.5
+67C,Stagecoach Yorkshire,1,1,1.0,0,0,1,1.0
