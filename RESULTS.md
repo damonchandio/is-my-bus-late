@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-364 hourly samples between 2026-10-28 and 2026-11-24, 6,585,345 measurements at stops, 341,245 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+365 hourly samples between 2026-10-28 and 2026-11-25, 6,585,345 measurements at stops, 341,245 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -34,8 +34,8 @@
 | 42 | First Leeds | 0.1 | 8.0% | 30.4% | 61.5% | 3304 |
 | 444 | Arriva Yorkshire | 0.2 | 8.2% | 29.7% | 62.0% | 1483 |
 | WF1 | Arriva Yorkshire | 0.2 | 4.6% | 34.4% | 61.0% | 35 |
-| 208 | Stagecoach Yorkshire | 0.4 | 21.5% | 47.5% | 31.1% | 100 |
 | 409 | Arriva Yorkshire | 0.4 | 1.6% | 14.6% | 83.8% | 52 |
+| 208 | Stagecoach Yorkshire | 0.4 | 21.5% | 47.5% | 31.1% | 100 |
 
 ## By operator
 
@@ -62,8 +62,8 @@
 | East Yorkshire | 62.2% | 25.2% | 8105 |
 | First Leeds | 62.6% | 20.0% | 83508 |
 | Stringers | 63.0% | 12.4% | 87 |
-| Stotts Coaches | 63.3% | 26.0% | 1673 |
 | First Halifax | 63.3% | 26.1% | 21886 |
+| Stotts Coaches | 63.3% | 26.0% | 1673 |
 | First Bradford | 63.9% | 20.2% | 34378 |
 | The Harrogate Bus Company | 67.2% | 22.6% | 4698 |
 | Team Pennine | 68.1% | 22.2% | 15095 |
