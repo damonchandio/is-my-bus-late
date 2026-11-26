@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-387 hourly samples between 2026-10-28 and 2026-11-25, 7,081,321 measurements at stops, 366,939 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+388 hourly samples between 2026-10-28 and 2026-11-26, 7,081,321 measurements at stops, 366,939 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -29,13 +29,13 @@
 | SM39 | Flyer | -5.4 | 0.0% | 57.1% | 42.9% | 31 |
 | 406 | Stevenson's Travel | -2.4 | 2.5% | 67.9% | 29.6% | 39 |
 | PR1 | First Leeds | -0.7 | 6.1% | 48.6% | 45.2% | 1057 |
-| PR2 | First Leeds | -0.5 | 6.3% | 45.1% | 48.6% | 887 |
 | 37 | York Pullman | -0.5 | 8.4% | 26.6% | 65.0% | 70 |
+| PR2 | First Leeds | -0.5 | 6.3% | 45.1% | 48.6% | 887 |
 | C39 | Team Pennine | -0.2 | 11.6% | 44.9% | 43.5% | 33 |
 | 42 | First Leeds | 0.1 | 7.8% | 30.7% | 61.5% | 3533 |
-| 208 | Stagecoach Yorkshire | 0.3 | 20.8% | 46.9% | 32.2% | 106 |
+| 97A | Globe Holidays | 0.3 | 7.2% | 36.8% | 56.0% | 45 |
 | WF1 | Arriva Yorkshire | 0.3 | 5.4% | 32.2% | 62.4% | 37 |
-| 409 | Arriva Yorkshire | 0.3 | 1.6% | 17.4% | 81.0% | 58 |
+| 444 | Arriva Yorkshire | 0.3 | 8.7% | 29.4% | 61.9% | 1592 |
 
 ## By operator
 
@@ -53,8 +53,8 @@
 | Coastliner | 53.4% | 39.5% | 1082 |
 | Globe Coaches | 54.8% | 26.8% | 3247 |
 | TLC Travel | 57.5% | 31.2% | 10490 |
-| Stagecoach Yorkshire | 58.0% | 26.0% | 22497 |
 | Arriva Yorkshire | 58.0% | 21.9% | 82768 |
+| Stagecoach Yorkshire | 58.0% | 26.0% | 22497 |
 | First South Yorkshire | 58.1% | 38.4% | 1533 |
 | Station Coaches | 58.5% | 12.7% | 380 |
 | Connexions Buses | 59.5% | 27.5% | 4292 |
