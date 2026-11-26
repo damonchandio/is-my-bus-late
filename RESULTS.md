@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-407 hourly samples between 2026-10-28 and 2026-11-26, 7,515,725 measurements at stops, 389,226 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+408 hourly samples between 2026-10-28 and 2026-11-26, 7,527,902 measurements at stops, 389,898 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -15,11 +15,11 @@
 | PS28 | The Keighley Bus Company | 10.0 | 59.2% | 0.8% | 40.1% | 44 |
 | 395 | Stotts Coaches | 9.3 | 47.5% | 4.6% | 47.9% | 138 |
 | X17 | Stagecoach Yorkshire | 9.1 | 59.0% | 4.8% | 36.2% | 483 |
-| 615 | East Yorkshire | 9.0 | 55.1% | 4.6% | 40.3% | 767 |
-| 508 | First Halifax | 8.8 | 57.5% | 3.5% | 39.0% | 1216 |
+| 615 | East Yorkshire | 9.0 | 54.8% | 4.6% | 40.5% | 771 |
+| 508 | First Halifax | 8.8 | 57.4% | 3.5% | 39.1% | 1218 |
 | K85 | Team Pennine | 8.4 | 64.1% | 0.8% | 35.1% | 44 |
-| 902 | TLC Travel | 8.3 | 67.1% | 2.4% | 30.5% | 64 |
 | 961 | Connexions Buses | 8.3 | 69.5% | 0.4% | 30.1% | 103 |
+| 902 | TLC Travel | 8.3 | 67.1% | 2.4% | 30.5% | 64 |
 | WA1 | Arriva Yorkshire | 8.3 | 55.5% | 17.8% | 26.7% | 43 |
 
 ## The 10 most punctual routes
@@ -28,14 +28,14 @@
 |---|---|---|---|---|---|---|
 | SM39 | Flyer | -5.3 | 0.0% | 55.9% | 44.1% | 33 |
 | 406 | Stevenson's Travel | -2.5 | 2.3% | 68.9% | 28.9% | 43 |
-| PR1 | First Leeds | -0.7 | 6.1% | 48.9% | 45.1% | 1130 |
-| PR2 | First Leeds | -0.5 | 6.4% | 44.8% | 48.8% | 952 |
+| PR1 | First Leeds | -0.7 | 6.1% | 48.9% | 45.1% | 1131 |
+| PR2 | First Leeds | -0.5 | 6.4% | 44.8% | 48.8% | 954 |
 | 37 | York Pullman | -0.4 | 7.8% | 25.9% | 66.3% | 73 |
 | C39 | Team Pennine | -0.2 | 10.6% | 44.9% | 44.5% | 35 |
 | K78 | Team Pennine | -0.1 | 6.9% | 41.5% | 51.6% | 32 |
-| 42 | First Leeds | 0.1 | 8.0% | 30.3% | 61.7% | 3730 |
-| 444 | Arriva Yorkshire | 0.3 | 9.0% | 29.1% | 61.9% | 1695 |
-| 97A | Globe Holidays | 0.3 | 6.7% | 36.4% | 56.9% | 51 |
+| 42 | First Leeds | 0.1 | 8.0% | 30.3% | 61.7% | 3738 |
+| 208 | Stagecoach Yorkshire | 0.3 | 20.6% | 46.3% | 33.0% | 112 |
+| WF1 | Arriva Yorkshire | 0.3 | 5.1% | 31.1% | 63.7% | 41 |
 
 ## By operator
 
@@ -48,29 +48,29 @@
 | Stagecoach Cumbria and North Lancashire | 45.6% | 47.1% | 324 |
 | Stevenson's Travel | 47.3% | 17.4% | 93 |
 | Squarepeg | 51.1% | 35.3% | 1975 |
-| Bee Network | 53.3% | 39.3% | 1219 |
+| Bee Network | 53.4% | 39.2% | 1222 |
 | Coastliner | 53.4% | 39.5% | 1082 |
-| Globe Holidays | 53.7% | 23.5% | 1530 |
-| Globe Coaches | 55.1% | 26.6% | 3462 |
-| TLC Travel | 57.7% | 30.9% | 11071 |
-| Arriva Yorkshire | 58.2% | 21.8% | 87867 |
+| Globe Holidays | 53.7% | 23.5% | 1531 |
+| Globe Coaches | 55.1% | 26.7% | 3470 |
+| TLC Travel | 57.7% | 30.9% | 11087 |
 | Station Coaches | 58.2% | 11.9% | 409 |
-| First South Yorkshire | 58.3% | 38.3% | 1624 |
-| Stagecoach Yorkshire | 58.5% | 25.3% | 24184 |
+| Arriva Yorkshire | 58.2% | 21.8% | 87967 |
+| First South Yorkshire | 58.3% | 38.2% | 1626 |
+| Stagecoach Yorkshire | 58.5% | 25.3% | 24236 |
 | Connexions Buses | 59.6% | 27.3% | 4601 |
 | Stringers | 61.1% | 12.8% | 108 |
-| East Yorkshire | 61.9% | 25.8% | 9095 |
-| The Burnley Bus Company | 62.3% | 27.0% | 2987 |
-| First Leeds | 62.8% | 19.8% | 94368 |
+| East Yorkshire | 61.9% | 25.8% | 9110 |
+| The Burnley Bus Company | 62.4% | 26.9% | 2993 |
+| First Leeds | 62.8% | 19.8% | 94572 |
 | Stotts Coaches | 62.9% | 26.6% | 1949 |
-| First Halifax | 63.2% | 26.0% | 24827 |
-| First Bradford | 64.1% | 19.9% | 38901 |
-| The Harrogate Bus Company | 67.5% | 22.3% | 5342 |
-| Team Pennine | 67.9% | 22.6% | 17224 |
-| The Keighley Bus Company | 69.5% | 21.2% | 23205 |
-| Flyer | 71.5% | 16.6% | 4550 |
+| First Halifax | 63.2% | 25.9% | 24874 |
+| First Bradford | 64.1% | 19.9% | 38985 |
+| The Harrogate Bus Company | 67.5% | 22.3% | 5354 |
+| Team Pennine | 67.9% | 22.6% | 17249 |
+| The Keighley Bus Company | 69.5% | 21.2% | 23240 |
+| Flyer | 71.5% | 16.6% | 4561 |
 | York Pullman | 71.6% | 9.3% | 171 |
-| First Halifax, Calder Valley & Huddersfield | 72.8% | 16.9% | 26843 |
+| First Halifax, Calder Valley & Huddersfield | 72.8% | 16.9% | 26894 |
 | 21 Transport | 81.7% | 12.1% | 109 |
 
 Typical minutes late = observation-weighted average of each hourly sample's median delay. Routes need 30 measured trips to appear. Source: DfT Bus Open Data Service (OGL v3.0).
