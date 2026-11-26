@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-389 hourly samples between 2026-10-28 and 2026-11-26, 7,081,321 measurements at stops, 366,939 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+390 hourly samples between 2026-10-28 and 2026-11-26, 7,081,337 measurements at stops, 366,941 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -18,8 +18,8 @@
 | K85 | Team Pennine | 8.7 | 66.1% | 0.6% | 33.2% | 42 |
 | 961 | Connexions Buses | 8.4 | 69.5% | 0.3% | 30.2% | 96 |
 | 902 | TLC Travel | 8.4 | 67.7% | 2.6% | 29.7% | 60 |
-| WA1 | Arriva Yorkshire | 8.2 | 56.8% | 18.7% | 24.5% | 40 |
 | 72 | The Keighley Bus Company | 8.2 | 36.9% | 7.3% | 55.9% | 181 |
+| WA1 | Arriva Yorkshire | 8.2 | 56.8% | 18.7% | 24.5% | 40 |
 | 389 | Stotts Coaches | 8.1 | 64.4% | 2.2% | 33.4% | 59 |
 
 ## The 10 most punctual routes
@@ -33,9 +33,9 @@
 | PR2 | First Leeds | -0.5 | 6.3% | 45.1% | 48.6% | 887 |
 | C39 | Team Pennine | -0.2 | 11.6% | 44.9% | 43.5% | 33 |
 | 42 | First Leeds | 0.1 | 7.8% | 30.7% | 61.5% | 3533 |
-| WF1 | Arriva Yorkshire | 0.3 | 5.4% | 32.2% | 62.4% | 37 |
 | 444 | Arriva Yorkshire | 0.3 | 8.7% | 29.4% | 61.9% | 1592 |
-| 409 | Arriva Yorkshire | 0.3 | 1.6% | 17.4% | 81.0% | 58 |
+| 208 | Stagecoach Yorkshire | 0.3 | 20.8% | 46.9% | 32.2% | 106 |
+| 97A | Globe Holidays | 0.3 | 7.2% | 36.8% | 56.0% | 45 |
 
 ## By operator
 
@@ -53,8 +53,8 @@
 | Coastliner | 53.4% | 39.5% | 1082 |
 | Globe Coaches | 54.8% | 26.8% | 3247 |
 | TLC Travel | 57.5% | 31.2% | 10490 |
-| Arriva Yorkshire | 58.0% | 21.9% | 82768 |
 | Stagecoach Yorkshire | 58.0% | 26.0% | 22497 |
+| Arriva Yorkshire | 58.0% | 21.9% | 82768 |
 | First South Yorkshire | 58.1% | 38.4% | 1533 |
 | Station Coaches | 58.5% | 12.7% | 380 |
 | Connexions Buses | 59.5% | 27.5% | 4292 |
@@ -64,7 +64,7 @@
 | First Halifax | 63.2% | 26.0% | 23456 |
 | Stotts Coaches | 63.2% | 26.2% | 1814 |
 | Stringers | 63.9% | 11.4% | 97 |
-| First Bradford | 64.0% | 20.1% | 36819 |
+| First Bradford | 64.0% | 20.1% | 36821 |
 | The Harrogate Bus Company | 67.7% | 22.1% | 5045 |
 | Team Pennine | 68.0% | 22.4% | 16219 |
 | The Keighley Bus Company | 69.3% | 21.5% | 21850 |
