@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-410 hourly samples between 2026-10-28 and 2026-11-27, 7,537,908 measurements at stops, 390,448 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+411 hourly samples between 2026-10-28 and 2026-11-27, 7,537,908 measurements at stops, 390,448 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -11,8 +11,8 @@
 | 486 | SMT Bus and Coach Ltd | 13.0 | 76.5% | 1.4% | 22.0% | 31 |
 | ML2 | TLC Travel | 12.3 | 45.0% | 36.9% | 18.1% | 46 |
 | 412 | Connexions Buses | 11.6 | 66.8% | 0.5% | 32.7% | 161 |
-| PS28 | The Keighley Bus Company | 10.0 | 59.2% | 0.8% | 40.1% | 44 |
 | 635 | TLC Travel | 10.0 | 61.3% | 6.4% | 32.4% | 294 |
+| PS28 | The Keighley Bus Company | 10.0 | 59.2% | 0.8% | 40.1% | 44 |
 | 395 | Stotts Coaches | 9.3 | 47.5% | 4.6% | 47.9% | 138 |
 | X17 | Stagecoach Yorkshire | 9.1 | 59.0% | 4.8% | 36.2% | 483 |
 | 615 | East Yorkshire | 8.9 | 54.7% | 4.6% | 40.7% | 773 |
@@ -34,8 +34,8 @@
 | C39 | Team Pennine | -0.2 | 10.6% | 44.9% | 44.5% | 35 |
 | K78 | Team Pennine | -0.1 | 6.9% | 41.5% | 51.6% | 32 |
 | 42 | First Leeds | 0.1 | 8.0% | 30.3% | 61.7% | 3744 |
-| 444 | Arriva Yorkshire | 0.3 | 9.0% | 29.1% | 61.9% | 1697 |
 | 208 | Stagecoach Yorkshire | 0.3 | 20.6% | 46.3% | 33.0% | 112 |
+| 444 | Arriva Yorkshire | 0.3 | 9.0% | 29.1% | 61.9% | 1697 |
 
 ## By operator
 
@@ -48,13 +48,13 @@
 | Stagecoach Cumbria and North Lancashire | 45.6% | 47.1% | 324 |
 | Stevenson's Travel | 47.3% | 17.4% | 93 |
 | Squarepeg | 51.1% | 35.3% | 1975 |
-| Coastliner | 53.4% | 39.5% | 1082 |
 | Bee Network | 53.4% | 39.1% | 1225 |
+| Coastliner | 53.4% | 39.5% | 1082 |
 | Globe Holidays | 53.7% | 23.5% | 1531 |
 | Globe Coaches | 55.1% | 26.6% | 3476 |
 | TLC Travel | 57.7% | 30.9% | 11101 |
-| Arriva Yorkshire | 58.2% | 21.7% | 88064 |
 | Station Coaches | 58.2% | 11.9% | 409 |
+| Arriva Yorkshire | 58.2% | 21.7% | 88064 |
 | First South Yorkshire | 58.4% | 38.1% | 1629 |
 | Stagecoach Yorkshire | 58.5% | 25.3% | 24276 |
 | Connexions Buses | 59.6% | 27.3% | 4601 |
