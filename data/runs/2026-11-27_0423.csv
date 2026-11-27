@@ -1,0 +1,4 @@
+route,operator,n,trips,delay_sum,n_over5,n_early,n_ontime,run_median
+501,First Halifax,11,1,227.0,0,0,11,7.0
+363,"First Halifax, Calder Valley & Huddersfield",10,1,-146.0,0,1,9,33.5
+72,First Bradford,13,1,-330.0,0,5,8,-17.0
