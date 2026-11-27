@@ -1,6 +1,6 @@
 # Is my bus late? West Yorkshire
 
-409 hourly samples between 2026-10-28 and 2026-11-26, 7,537,908 measurements at stops, 390,448 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
+410 hourly samples between 2026-10-28 and 2026-11-27, 7,537,908 measurements at stops, 390,448 bus trips. On time = within 1 minute early to 5 minutes late at the stop.
 
 ## The 15 latest routes
 
@@ -11,16 +11,16 @@
 | 486 | SMT Bus and Coach Ltd | 13.0 | 76.5% | 1.4% | 22.0% | 31 |
 | ML2 | TLC Travel | 12.3 | 45.0% | 36.9% | 18.1% | 46 |
 | 412 | Connexions Buses | 11.6 | 66.8% | 0.5% | 32.7% | 161 |
-| 635 | TLC Travel | 10.0 | 61.3% | 6.4% | 32.4% | 294 |
 | PS28 | The Keighley Bus Company | 10.0 | 59.2% | 0.8% | 40.1% | 44 |
+| 635 | TLC Travel | 10.0 | 61.3% | 6.4% | 32.4% | 294 |
 | 395 | Stotts Coaches | 9.3 | 47.5% | 4.6% | 47.9% | 138 |
 | X17 | Stagecoach Yorkshire | 9.1 | 59.0% | 4.8% | 36.2% | 483 |
 | 615 | East Yorkshire | 8.9 | 54.7% | 4.6% | 40.7% | 773 |
 | 508 | First Halifax | 8.8 | 57.4% | 3.5% | 39.1% | 1220 |
 | K85 | Team Pennine | 8.4 | 64.1% | 0.8% | 35.1% | 44 |
 | 902 | TLC Travel | 8.3 | 67.1% | 2.4% | 30.5% | 64 |
-| WA1 | Arriva Yorkshire | 8.3 | 55.5% | 17.8% | 26.7% | 43 |
 | 961 | Connexions Buses | 8.3 | 69.5% | 0.4% | 30.1% | 103 |
+| WA1 | Arriva Yorkshire | 8.3 | 55.5% | 17.8% | 26.7% | 43 |
 
 ## The 10 most punctual routes
 
@@ -34,8 +34,8 @@
 | C39 | Team Pennine | -0.2 | 10.6% | 44.9% | 44.5% | 35 |
 | K78 | Team Pennine | -0.1 | 6.9% | 41.5% | 51.6% | 32 |
 | 42 | First Leeds | 0.1 | 8.0% | 30.3% | 61.7% | 3744 |
-| WF1 | Arriva Yorkshire | 0.3 | 5.1% | 31.1% | 63.7% | 41 |
 | 444 | Arriva Yorkshire | 0.3 | 9.0% | 29.1% | 61.9% | 1697 |
+| 208 | Stagecoach Yorkshire | 0.3 | 20.6% | 46.3% | 33.0% | 112 |
 
 ## By operator
 
